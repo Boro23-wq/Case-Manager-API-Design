@@ -1,0 +1,17 @@
+id = 92d00750-1af3-49d8-9bb0-5b5fb9213fd3
+
+[relations]
+
+[relations.collections]
+rootDirectory = postman/collections
+files[] = {"id":"23943499-5df2d3c5-8a19-4b2e-ab97-c02456b3ad9f","path":"Case Manager API Collection.json","metaData":{}}
+
+[relations.collections.metaData]
+
+[relations.apiDefinition]
+rootDirectory = postman/schemas
+files[] = {"path":"index.yaml","metaData":{}}
+
+[relations.apiDefinition.metaData]
+type = openapi:3
+rootFiles[] = index.yaml

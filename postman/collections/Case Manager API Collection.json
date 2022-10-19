@@ -1,0 +1,881 @@
+{
+	"info": {
+		"_postman_id": "5df2d3c5-8a19-4b2e-ab97-c02456b3ad9f",
+		"name": "Case Manager API Collection",
+		"description": "The API retrieves information about case managers and their cases.\n\nContact Support:\n Name: Sintu Boro\n Email: sb394@njit.edu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23943499-5df2d3c5-8a19-4b2e-ab97-c02456b3ad9f"
+	},
+	"item": [
+		{
+			"name": "case Managers",
+			"item": [
+				{
+					"name": "Create a case manager.",
+					"id": "0e5cb983-db25-4e72-8f2b-559ad8fdb90f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/caseManagers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"caseManagers"
+							]
+						},
+						"description": "Creates a new case manager using the required fields and adds it to the system."
+					},
+					"response": [
+						{
+							"id": "26946af7-b887-40a9-9356-9e14cd7d4c90",
+							"name": "Successfully created case manager.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/caseManagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManagers"
+									]
+								},
+								"description": "Creates a new case manager using the required fields and adds it to the system."
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "aaa49379-564e-4b08-872f-41c74993dd2b",
+							"name": "Bad request. The fields are required.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/caseManagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManagers"
+									]
+								},
+								"description": "Creates a new case manager using the required fields and adds it to the system."
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "50ce305b-967f-417a-9a3a-0373a38145c2",
+							"name": "Internal Server Error. Please try again later",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/caseManagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManagers"
+									]
+								},
+								"description": "Creates a new case manager using the required fields and adds it to the system."
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Find all case managers.",
+					"id": "ce5b1df8-16af-4ac7-8e3e-a8ca8d321b26",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/caseManagers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"caseManagers"
+							]
+						},
+						"description": "Get all the case managers and their cases."
+					},
+					"response": [
+						{
+							"id": "3bd9e01e-bb1a-4e24-b288-dc9e548d6cb2",
+							"name": "Successfully retrieved all the case managers.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManagers"
+									]
+								},
+								"description": "Get all the case managers and their cases."
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n      },\n      {\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n      }\n    ]\n  },\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n      },\n      {\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n      }\n    ]\n  }\n]"
+						},
+						{
+							"id": "b9055085-11c5-4b2b-b18e-63081ef1b480",
+							"name": "Bad request.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManagers"
+									]
+								},
+								"description": "Get all the case managers and their cases."
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "56dcd606-e60f-4b93-8ba1-4ec9b9b3353a",
+							"name": "Internal Server Error. Please try again later",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManagers"
+									]
+								},
+								"description": "Get all the case managers and their cases."
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "d26e481b-3c9d-442c-9bc1-a951759a09b9"
+		},
+		{
+			"name": "case Manager/{id}",
+			"item": [
+				{
+					"name": "Find case manager by ID.",
+					"id": "382d4e2c-63bd-487e-820a-97810bde34cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/caseManager/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"caseManager",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66168742",
+									"description": "(Required) ID of case manager to return"
+								}
+							]
+						},
+						"description": "Returns a single case manager"
+					},
+					"response": [
+						{
+							"id": "2fd7baeb-e970-4a17-aa7c-cc18dcb2563d",
+							"name": "Successfully retrieved case manager",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) ID of case manager to return"
+										}
+									]
+								},
+								"description": "Returns a single case manager"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "d0240aa4-75d3-41b0-8cec-1b2722ec4913",
+							"name": "Invalid ID supplied",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) ID of case manager to return"
+										}
+									]
+								},
+								"description": "Returns a single case manager"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "8c53e617-3efe-41f0-8c96-06e5097edd62",
+							"name": "Case manager with the ID not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) ID of case manager to return"
+										}
+									]
+								},
+								"description": "Returns a single case manager"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update a case manager.",
+					"id": "0dca24d3-4934-4996-a248-da59569c284a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/caseManager/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"caseManager",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66168742",
+									"description": "(Required) The id of the case manager that needs to be updated"
+								}
+							]
+						},
+						"description": "Update details of a case manager using ID."
+					},
+					"response": [
+						{
+							"id": "701f74d0-9063-4e19-aa8e-b793d6501845",
+							"name": "Successfully created case manager.",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) The id of the case manager that needs to be updated"
+										}
+									]
+								},
+								"description": "Update details of a case manager using ID."
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "f28d15e5-020e-4064-9efc-f350e5d3bdff",
+							"name": "Invalid case manager supplied",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) The id of the case manager that needs to be updated"
+										}
+									]
+								},
+								"description": "Update details of a case manager using ID."
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "ea585bae-039a-4e34-9785-e7a676a8f7b2",
+							"name": "Case manager not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"id\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    },\n    {\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientID\": \"6c47da92-4b6a-431c-8cbe-78f8d386625f\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) The id of the case manager that needs to be updated"
+										}
+									]
+								},
+								"description": "Update details of a case manager using ID."
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete a case manager.",
+					"id": "b17a4acd-ed6a-4b0f-8cf7-a2aadcbccb49",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/caseManager/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"caseManager",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66168742",
+									"description": "(Required) The id of the case manager that needs to be deleted"
+								}
+							]
+						},
+						"description": "Delete an existing case manager."
+					},
+					"response": [
+						{
+							"id": "33059dac-18a3-49f8-9cb1-4e9f3e7fa6ba",
+							"name": "Case manager deleted sucessfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) The id of the case manager that needs to be deleted"
+										}
+									]
+								},
+								"description": "Delete an existing case manager."
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"290cdddc-31af-481c-9000-2ab4eabeebaf\""
+						},
+						{
+							"id": "8bbd816c-d09a-4e75-af55-6deb147e5667",
+							"name": "Invalid id supplied",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) The id of the case manager that needs to be deleted"
+										}
+									]
+								},
+								"description": "Delete an existing case manager."
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "fe777d07-2a3f-40b1-bfcd-e3ddb6ea4a37",
+							"name": "Case manager not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/caseManager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"caseManager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66168742",
+											"description": "(Required) The id of the case manager that needs to be deleted"
+										}
+									]
+								},
+								"description": "Delete an existing case manager."
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "f827eae6-83e6-46ed-bd9c-86238568959d"
+		}
+	],
+	"variable": [
+		{
+			"id": "41d63de4-4851-458b-9d34-b445f478c8b2",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
