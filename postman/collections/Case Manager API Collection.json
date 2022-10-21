@@ -1,0 +1,1001 @@
+{
+	"info": {
+		"_postman_id": "3474b6aa-5191-40d2-a328-91f9c0a68541",
+		"name": "Case Manager API Collection",
+		"description": "The API retrieves information about case managers and their cases.\n\nContact Support:\n Name: Sintu Boro\n Email: sb394@njit.edu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23943499-3474b6aa-5191-40d2-a328-91f9c0a68541"
+	},
+	"item": [
+		{
+			"name": "casemanagers",
+			"item": [
+				{
+					"name": "Create a case manager.",
+					"id": "113216c4-5c25-4357-b6d0-06e7fb412e6c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidat\",\n      \"category\": \"quis dolore id exercitation\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"non sunt quis dolor reprehenderit\",\n      \"category\": \"deserunt in\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/casemanagers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanagers"
+							]
+						},
+						"description": "Creates a new case manager using the input provided and add it to the system."
+					},
+					"response": [
+						{
+							"id": "cb1d2bad-6ebd-4d43-9ae8-e0979365934c",
+							"name": "Successfully created case manager.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
+						},
+						{
+							"id": "07a9010c-342f-4350-8435-eb409c5dd2a5",
+							"name": "Bad request. Required fields are missing.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "fc334923-93e9-4153-b254-33b260fe19c2",
+							"name": "Not found.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "64094c22-43bc-42cc-bdb9-c98a726f94a9",
+							"name": "Internal Server Error. Please try again later",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Find all case managers.",
+					"id": "bd447471-e983-45de-acc5-c92db33609cb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/casemanagers?page=-83641149&perPage=-83641149",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanagers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "-83641149",
+									"description": "Page number to paginate."
+								},
+								{
+									"key": "perPage",
+									"value": "-83641149",
+									"description": "Total items to retrive at once."
+								}
+							]
+						},
+						"description": "Get all the case managers and their cases recorded in the system."
+					},
+					"response": [
+						{
+							"id": "cec3a2cb-f2d3-4016-9331-526b30928fa2",
+							"name": "Successfully retrieved all the case managers.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=-83641149&perPage=-83641149",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "-83641149"
+										},
+										{
+											"key": "perPage",
+											"value": "-83641149"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"status\": \"qui dolor culpa aliquip\",\n        \"category\": \"magna nisi culpa c\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {},\n        \"solution\": {},\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      },\n      {\n        \"status\": \"pariatur magna enim laborum voluptate\",\n        \"category\": \"nostrud mollit aliquip\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {},\n        \"solution\": {},\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"status\": \"ullamco\",\n        \"category\": \"sint cupidatat Lore\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {},\n        \"solution\": {},\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      },\n      {\n        \"status\": \"reprehenderit ex\",\n        \"category\": \"ea esse dolor fugiat\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {},\n        \"solution\": {},\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {},\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      }\n    ]\n  }\n]"
+						},
+						{
+							"id": "800d0422-a916-44f6-b6bf-1588911dcfbc",
+							"name": "Bad request.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=-83641149&perPage=-83641149",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "-83641149"
+										},
+										{
+											"key": "perPage",
+											"value": "-83641149"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "8353441c-62c5-4643-b540-d858dfb1d0d3",
+							"name": "Not found.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=-83641149&perPage=-83641149",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "-83641149"
+										},
+										{
+											"key": "perPage",
+											"value": "-83641149"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "732312d2-9c3e-46ed-a3d8-be8a0a8e6f61",
+							"name": "Internal Server Error. Please try again later.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=-83641149&perPage=-83641149",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "-83641149"
+										},
+										{
+											"key": "perPage",
+											"value": "-83641149"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "c393b12b-c6f4-4357-a342-d50d89dcba5e"
+		},
+		{
+			"name": "casemanager/{id}",
+			"item": [
+				{
+					"name": "Find case manager by ID.",
+					"id": "2d41fda5-5b59-4595-a609-1ff1161ebcf6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/casemanager/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanager",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-19178032",
+									"description": "(Required) ID of case manager to return."
+								}
+							]
+						},
+						"description": "Returns a single case manager with the provided ID."
+					},
+					"response": [
+						{
+							"id": "97dc17c6-4a69-4002-b7a9-233d25bdda84",
+							"name": "Successfully retrieved case manager.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of case manager to return."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
+						},
+						{
+							"id": "0ce29746-8aae-4b7a-855b-5dc5f2e15786",
+							"name": "Sorry! Couldn't find case manager with the ID provided.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of case manager to return."
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "91d406c4-177f-40aa-9b69-3568cdd70ac6",
+							"name": "Sorry! Case manager with the ID not found.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of case manager to return."
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "957ce5bc-3990-4acf-ab36-edded35a92f5",
+							"name": "Internal server error. Please try again later.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of case manager to return."
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update a case manager.",
+					"id": "3d451e05-9d5d-41b0-bada-01df1a95706e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/casemanager/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanager",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-19178032",
+									"description": "(Required) ID of the case manager to be updated."
+								}
+							]
+						},
+						"description": "Update details of a case manager using ID."
+					},
+					"response": [
+						{
+							"id": "9ec62941-385c-4a51-8e2e-e674edce0ca2",
+							"name": "Successfully updated case manager with the provided ID.",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be updated."
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
+						},
+						{
+							"id": "db0c7738-d072-40bd-a384-668cb97144ca",
+							"name": "Sorry! Couldn't find case manager with the ID provided.",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be updated."
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "06fcfbd0-51b0-46f6-845c-f7a0f85acce4",
+							"name": "Sorry! Case manager with the ID not found.",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be updated."
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "661ee226-6a5c-40a7-9382-5433c871c681",
+							"name": "Internal server error. Please try again later.",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"cupidatat commodo reprehenderit\",\n      \"category\": \"velit\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"nulla in\",\n      \"category\": \"dolore magna enim ipsum dolore\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {},\n      \"solution\": {},\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {},\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"mileStoneId\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"activityId\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be updated."
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete a case manager.",
+					"id": "87efe8e4-434f-448c-9cec-84ec860de954",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/casemanager/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanager",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-19178032",
+									"description": "(Required) ID of the case manager to be deleted."
+								}
+							]
+						},
+						"description": "Delete an existing case manager."
+					},
+					"response": [
+						{
+							"id": "3345d876-7090-4944-a24a-31fe76812761",
+							"name": "Case manager deleted sucessfully.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be deleted."
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"290cdddc-31af-481c-9000-2ab4eabeebaf\""
+						},
+						{
+							"id": "4ff4a8a5-46fe-49c3-8596-29219ba64ea3",
+							"name": "Sorry! Couldn't find case manager with the ID provided.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be deleted."
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "41e310fc-e21c-422a-a729-934362d6ca86",
+							"name": "Sorry! Case manager with the ID not found.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be deleted."
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "a72b2c08-a084-4890-8d5e-199228e1cd85",
+							"name": "Internal server error. Please try again later.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanager/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanager",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-19178032",
+											"description": "(Required) ID of the case manager to be deleted."
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "ea6bd13d-c08f-4709-8105-7d34fc4ab33c"
+		}
+	],
+	"variable": [
+		{
+			"id": "5d8b3783-ee8f-49b1-bb03-170cc596e1b0",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

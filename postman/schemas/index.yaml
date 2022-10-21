@@ -16,8 +16,8 @@ tags:
       description: API endpoints to access case managers in the system
 
 paths:
-    /caseManagers:
-        # @POST /caseManagers
+    /casemanagers:
+        # @POST /casemanagers
         post:
             tags:
                 - case-manager
@@ -47,7 +47,7 @@ paths:
                 description: Created case manager object.
                 required: true
 
-        # @GET /caseManagers
+        # @GET /casemanagers
         get:
             tags:
                 - case-manager
@@ -55,8 +55,16 @@ paths:
             description: Get all the case managers and their cases recorded in the system.
             operationId: getCaseManagers
             parameters:
-                - { in: query, name: page, schema: { type: integer } }
-                - { in: query, name: perPage, schema: { type: integer } }
+                - name: page
+                  in: query
+                  description: Page number to paginate.
+                  schema:
+                      type: integer
+                - name: perPage
+                  in: query
+                  description: Total items to retrive at once.
+                  schema:
+                      type: integer
 
             responses:
                 "200":
@@ -74,8 +82,8 @@ paths:
                 "500":
                     description: Internal Server Error. Please try again later.
 
-    /caseManager/{id}:
-        # @GET /caseManager/{id}
+    /casemanager/{id}:
+        # @GET /casemanager/{id}
         get:
             tags:
                 - case-manager
@@ -104,7 +112,7 @@ paths:
                 "500":
                     description: Internal server error. Please try again later.
 
-        # @PUT /caseManager/{id}
+        # @PUT /casemanager/{id}
         put:
             tags:
                 - case-manager
@@ -142,7 +150,7 @@ paths:
                 description: Updated case manager object with the ID provided.
                 required: true
 
-        # @DELETE /caseManager/{id}
+        # @DELETE /casemanager/{id}
         delete:
             tags:
                 - case-manager
@@ -294,6 +302,9 @@ components:
                     type: string
                     format: date-time
                     example: "2021-03-30T08:30:00Z"
+                profession:
+                    type: string
+                    example: "Ophthalmologists"
                 phone:
                     type: integer
                     example: 8452877665
