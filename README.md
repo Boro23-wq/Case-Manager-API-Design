@@ -1,11 +1,11 @@
 
-# Case Manager API Documentation
+# Case Manager API Collection
 
 The API retrieves information about case managers and their cases.
 
 Contact Support:
- Name: Sintu Boro
- Email: sb394@njit.edu
+- **Name:** Sintu Boro
+- **Email:** sb394@njit.edu
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
 
@@ -20,7 +20,7 @@ Contact Support:
 
 ## Endpoints
 
-* [case Managers](#case-managers)
+* [casemanagers](#casemanagers)
     1. [Create a case manager.](#1-create-a-case-manager)
         * [Successfully created case manager.](#i-example-request-successfully-created-case-manager)
         * [Bad request. Required fields are missing.](#ii-example-request-bad-request-required-fields-are-missing)
@@ -31,7 +31,7 @@ Contact Support:
         * [Bad request.](#ii-example-request-bad-request)
         * [Not found.](#iii-example-request-not-found-1)
         * [Internal Server Error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-1)
-* [case Manager/{id}](#case-managerid)
+* [casemanager/{id}](#casemanagerid)
     1. [Find case manager by ID.](#1-find-case-manager-by-id)
         * [Successfully retrieved case manager.](#i-example-request-successfully-retrieved-case-manager)
         * [Sorry! Couldn't find case manager with the ID provided.](#ii-example-request-sorry-couldnt-find-case-manager-with-the-id-provided)
@@ -52,7 +52,7 @@ Contact Support:
 
 
 
-## case Managers
+## casemanagers
 
 
 
@@ -67,7 +67,7 @@ Creates a new case manager using the input provided and add it to the system.
 ```bash
 Method: POST
 Type: RAW
-URL: {{baseUrl}}/caseManagers
+URL: {{baseUrl}}/casemanagers
 ```
 
 
@@ -94,8 +94,8 @@ URL: {{baseUrl}}/caseManagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "consectetur Duis sit",
-      "category": "amet eu adipisicing in",
+      "status": "cupidat",
+      "category": "quis dolore id exercitation",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -130,8 +130,8 @@ URL: {{baseUrl}}/caseManagers
       ]
     },
     {
-      "status": "pariatur ut est id",
-      "category": "irure consequat Duis commodo",
+      "status": "non sunt quis dolor reprehenderit",
+      "category": "deserunt in",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -192,8 +192,8 @@ URL: {{baseUrl}}/caseManagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -228,8 +228,8 @@ URL: {{baseUrl}}/caseManagers
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -282,8 +282,8 @@ URL: {{baseUrl}}/caseManagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -318,8 +318,8 @@ URL: {{baseUrl}}/caseManagers
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -382,8 +382,8 @@ URL: {{baseUrl}}/caseManagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -418,8 +418,8 @@ URL: {{baseUrl}}/caseManagers
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -483,8 +483,8 @@ URL: {{baseUrl}}/caseManagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -519,8 +519,8 @@ URL: {{baseUrl}}/caseManagers
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -584,8 +584,8 @@ URL: {{baseUrl}}/caseManagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -620,8 +620,8 @@ URL: {{baseUrl}}/caseManagers
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -678,7 +678,7 @@ Get all the case managers and their cases recorded in the system.
 ```bash
 Method: GET
 Type: 
-URL: {{baseUrl}}/caseManagers
+URL: {{baseUrl}}/casemanagers
 ```
 
 
@@ -694,8 +694,8 @@ URL: {{baseUrl}}/caseManagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | 99033173 |  |
-| perPage | 99033173 |  |
+| page | -83641149 | Page number to paginate. |
+| perPage | -83641149 | Total items to retrive at once. |
 
 
 
@@ -710,8 +710,8 @@ URL: {{baseUrl}}/caseManagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | 99033173 |  |
-| perPage | 99033173 |  |
+| page | -83641149 |  |
+| perPage | -83641149 |  |
 
 
 
@@ -733,8 +733,8 @@ URL: {{baseUrl}}/caseManagers
     "modifiedAt": "2021-01-31T08:30:00Z",
     "cases": [
       {
-        "status": "adipisicing conseq",
-        "category": "nulla nostrud",
+        "status": "qui dolor culpa aliquip",
+        "category": "magna nisi culpa c",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
         "patientDetail": {},
@@ -769,8 +769,8 @@ URL: {{baseUrl}}/caseManagers
         ]
       },
       {
-        "status": "velit Duis",
-        "category": "occaecat id",
+        "status": "pariatur magna enim laborum voluptate",
+        "category": "nostrud mollit aliquip",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
         "patientDetail": {},
@@ -817,8 +817,8 @@ URL: {{baseUrl}}/caseManagers
     "modifiedAt": "2021-01-31T08:30:00Z",
     "cases": [
       {
-        "status": "sunt culpa",
-        "category": "cillum consequat",
+        "status": "ullamco",
+        "category": "sint cupidatat Lore",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
         "patientDetail": {},
@@ -853,8 +853,8 @@ URL: {{baseUrl}}/caseManagers
         ]
       },
       {
-        "status": "labore ea tempor ipsum",
-        "category": "sint id minim",
+        "status": "reprehenderit ex",
+        "category": "ea esse dolor fugiat",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
         "patientDetail": {},
@@ -908,8 +908,8 @@ URL: {{baseUrl}}/caseManagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | 99033173 |  |
-| perPage | 99033173 |  |
+| page | -83641149 |  |
+| perPage | -83641149 |  |
 
 
 
@@ -931,8 +931,8 @@ URL: {{baseUrl}}/caseManagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | 99033173 |  |
-| perPage | 99033173 |  |
+| page | -83641149 |  |
+| perPage | -83641149 |  |
 
 
 
@@ -954,8 +954,8 @@ URL: {{baseUrl}}/caseManagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | 99033173 |  |
-| perPage | 99033173 |  |
+| page | -83641149 |  |
+| perPage | -83641149 |  |
 
 
 
@@ -969,7 +969,7 @@ URL: {{baseUrl}}/caseManagers
 
 
 
-## case Manager/{id}
+## casemanager/{id}
 
 
 
@@ -984,7 +984,7 @@ Returns a single case manager with the provided ID.
 ```bash
 Method: GET
 Type: 
-URL: {{baseUrl}}/caseManager/:id
+URL: {{baseUrl}}/casemanager/:id
 ```
 
 
@@ -1000,7 +1000,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of case manager to return. |
+| id | -19178032 | (Required) ID of case manager to return. |
 
 
 
@@ -1015,7 +1015,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of case manager to return. |
+| id | -19178032 | (Required) ID of case manager to return. |
 
 
 
@@ -1036,8 +1036,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1072,8 +1072,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1126,7 +1126,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of case manager to return. |
+| id | -19178032 | (Required) ID of case manager to return. |
 
 
 
@@ -1148,7 +1148,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of case manager to return. |
+| id | -19178032 | (Required) ID of case manager to return. |
 
 
 
@@ -1170,7 +1170,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of case manager to return. |
+| id | -19178032 | (Required) ID of case manager to return. |
 
 
 
@@ -1195,7 +1195,7 @@ Update details of a case manager using ID.
 ```bash
 Method: PUT
 Type: RAW
-URL: {{baseUrl}}/caseManager/:id
+URL: {{baseUrl}}/casemanager/:id
 ```
 
 
@@ -1212,7 +1212,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be updated. |
+| id | -19178032 | (Required) ID of the case manager to be updated. |
 
 
 
@@ -1230,8 +1230,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1266,8 +1266,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1318,7 +1318,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be updated. |
+| id | -19178032 | (Required) ID of the case manager to be updated. |
 
 
 
@@ -1336,8 +1336,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1372,8 +1372,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1426,8 +1426,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1462,8 +1462,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1516,7 +1516,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be updated. |
+| id | -19178032 | (Required) ID of the case manager to be updated. |
 
 
 
@@ -1534,8 +1534,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1570,8 +1570,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1625,7 +1625,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be updated. |
+| id | -19178032 | (Required) ID of the case manager to be updated. |
 
 
 
@@ -1643,8 +1643,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1679,8 +1679,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1734,7 +1734,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be updated. |
+| id | -19178032 | (Required) ID of the case manager to be updated. |
 
 
 
@@ -1752,8 +1752,8 @@ URL: {{baseUrl}}/caseManager/:id
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "dolore officia in tempor laboris",
-      "category": "incididunt fugiat ipsum do",
+      "status": "cupidatat commodo reprehenderit",
+      "category": "velit",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1788,8 +1788,8 @@ URL: {{baseUrl}}/caseManager/:id
       ]
     },
     {
-      "status": "est",
-      "category": "Duis in nulla qui cillum",
+      "status": "nulla in",
+      "category": "dolore magna enim ipsum dolore",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
       "patientDetail": {},
@@ -1846,7 +1846,7 @@ Delete an existing case manager.
 ```bash
 Method: DELETE
 Type: 
-URL: {{baseUrl}}/caseManager/:id
+URL: {{baseUrl}}/casemanager/:id
 ```
 
 
@@ -1862,7 +1862,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be deleted. |
+| id | -19178032 | (Required) ID of the case manager to be deleted. |
 
 
 
@@ -1877,7 +1877,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be deleted. |
+| id | -19178032 | (Required) ID of the case manager to be deleted. |
 
 
 
@@ -1905,7 +1905,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be deleted. |
+| id | -19178032 | (Required) ID of the case manager to be deleted. |
 
 
 
@@ -1927,7 +1927,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be deleted. |
+| id | -19178032 | (Required) ID of the case manager to be deleted. |
 
 
 
@@ -1949,7 +1949,7 @@ URL: {{baseUrl}}/caseManager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -78323989 | (Required) ID of the case manager to be deleted. |
+| id | -19178032 | (Required) ID of the case manager to be deleted. |
 
 
 
@@ -1964,6 +1964,6 @@ URL: {{baseUrl}}/caseManager/:id
 
 
 ---
-[Back to top](#case-manager-api-documentation)
+[Back to top](#case-manager-api-collection)
 
->Generated at 2022-10-20 22:12:05 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2022-10-20 22:30:56 by [docgen](https://github.com/thedevsaddam/docgen)
