@@ -54,6 +54,9 @@ paths:
             summary: Find all case managers.
             description: Get all the case managers and their cases recorded in the system.
             operationId: getCaseManagers
+            parameters:
+                - { in: query, name: page, schema: { type: integer } }
+                - { in: query, name: perPage, schema: { type: integer } }
 
             responses:
                 "200":
@@ -394,3 +397,22 @@ components:
             
             required:
                 - description
+
+        PaginatedResult:
+            type: object
+            properties:
+                total:
+                    type: number
+                page:
+                    type: number
+                perPage:
+                    type: number
+                hasNext:
+                    type: boolean
+                hasPrev:
+                    type: boolean
+                results:
+                    type: array
+                    items:
+                        # any number of items 
+                        {}
