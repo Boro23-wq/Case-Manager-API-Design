@@ -22,7 +22,7 @@ paths:
             tags:
                 - case-manager
             summary: Create a case manager.
-            description: Creates a new case manager using the required fields and adds it to the system.
+            description: Creates a new case manager using the input provided and add it to the system.
             operationId: createCaseManager
 
             responses:
@@ -33,7 +33,9 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/CaseManager"
                 "400":
-                    description: Bad request. The fields are required.
+                    description: Bad request. Required fields are missing.
+                "404":
+                    description: Not found.
                 "500":
                     description: Internal Server Error. Please try again later
 
@@ -42,7 +44,7 @@ paths:
                     application/json:
                         schema:
                             $ref: "#/components/schemas/CaseManager"
-                description: Created case manager object
+                description: Created case manager object.
                 required: true
 
         # @GET /caseManagers
@@ -50,7 +52,7 @@ paths:
             tags:
                 - case-manager
             summary: Find all case managers.
-            description: Get all the case managers and their cases.
+            description: Get all the case managers and their cases recorded in the system.
             operationId: getCaseManagers
 
             responses:
@@ -64,8 +66,10 @@ paths:
                                     $ref: "#/components/schemas/CaseManager"
                 "400":
                     description: Bad request.
+                "404":
+                    description: Not found.
                 "500":
-                    description: Internal Server Error. Please try again later
+                    description: Internal Server Error. Please try again later.
 
     /caseManager/{id}:
         # @GET /caseManager/{id}
@@ -73,27 +77,29 @@ paths:
             tags:
                 - case-manager
             summary: Find case manager by ID.
-            description: Returns a single case manager
+            description: Returns a single case manager with the provided ID.
             operationId: getCaseManagerByID
             parameters:
                 - name: id
                   in: path
-                  description: ID of case manager to return
+                  description: ID of case manager to return.
                   required: true
                   schema:
                       type: integer
                       format: uuid
             responses:
                 "200":
-                    description: Successfully retrieved case manager
+                    description: Successfully retrieved case manager.
                     content:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/CaseManager"
                 "400":
-                    description: Invalid ID supplied
+                    description: Sorry! Couldn't find case manager with the ID provided.
                 "404":
-                    description: Case manager with the ID not found
+                    description: Sorry! Case manager with the ID not found.
+                "500":
+                    description: Internal server error. Please try again later.
 
         # @PUT /caseManager/{id}
         put:
@@ -105,7 +111,7 @@ paths:
             parameters:
                 - name: id
                   in: path
-                  description: The id of the case manager that needs to be updated
+                  description: ID of the case manager to be updated.
                   required: true
                   schema:
                       type: integer
@@ -113,22 +119,24 @@ paths:
 
             responses:
                 "201":
-                    description: Successfully created case manager.
+                    description: Successfully updated case manager with the provided ID.
                     content:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/CaseManager"
                 "400":
-                    description: Invalid case manager supplied
+                    description:  Sorry! Couldn't find case manager with the ID provided.
                 "404":
-                    description: Case manager not found
+                    description: Sorry! Case manager with the ID not found.
+                "500":
+                    description: Internal server error. Please try again later.
 
             requestBody:
                 content:
                     application/json:
                         schema:
                             $ref: "#/components/schemas/CaseManager"
-                description: Updated user object
+                description: Updated case manager object with the ID provided.
                 required: true
 
         # @DELETE /caseManager/{id}
@@ -141,14 +149,14 @@ paths:
             parameters:
                 - name: id
                   in: path
-                  description: The id of the case manager that needs to be deleted
+                  description: ID of the case manager to be deleted.
                   required: true
                   schema:
                       type: integer
                       format: uuid
             responses:
                 "204":
-                    description: Case manager deleted sucessfully
+                    description: Case manager deleted sucessfully.
                     content:
                         application/json:
                             schema:
@@ -156,9 +164,11 @@ paths:
                                 format: uuid
                                 example: "290cdddc-31af-481c-9000-2ab4eabeebaf"
                 "400":
-                    description: Invalid id supplied
+                    description: Sorry! Couldn't find case manager with the ID provided.
                 "404":
-                    description: Case manager not found
+                    description: Sorry! Case manager with the ID not found.
+                "500":
+                    description: Internal server error. Please try again later.
 
 # Reusable component schemas
 components:
@@ -167,7 +177,7 @@ components:
         CaseManager:
             type: object
             properties:
-                id:
+                caseManagerId:
                     type: string
                     format: uuid
                     example: "378cdddc-31af-481c-9000-2ab4eabeebaf"
@@ -223,6 +233,10 @@ components:
                     type: string
                     format: date-time
                     example: "2021-04-28T08:30:00Z"
+                status:
+                    type: string
+                category:
+                    type: string
                 assignedTo:
                     type: object
                     nullable: true
@@ -234,10 +248,30 @@ components:
                 subject:
                     type: string
                     example: "Operation follow-up"
-                patientID:
-                    type: string
-                    format: uuid
-                    example: "6c47da92-4b6a-431c-8cbe-78f8d386625f"
+                patientDetail:
+                    type: object
+                    items:
+                        $ref: "#/components/schemas/Patient"
+                solution:
+                    type: object
+                    items:
+                        $ref: "#/components/schemas/Solution"
+                milestones:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/Milestone"
+                activities:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/Activity"
+            
+            required:
+                - status
+                - category
+                - severity
+                - subject
+                - patientDetail
+                - solution
         
         # Assignee schema
         Assignee:
@@ -265,3 +299,98 @@ components:
                     format: email
                     example: "kathmarshall@hm.io"
 
+            required:
+                - firstName
+                - lastName
+                - severity
+                - phone
+                - email
+
+        # Patient schema
+        Patient:
+            type: object
+            properties:
+                patientId:
+                    type: string
+                    format: uuid
+                    example: "205605a82-a612-4dc1-9279-7215df6895cd"
+                firstName:
+                    type: string
+                    example: "Matt"
+                lastName:
+                    type: string
+                    example: "Turner"
+                userName:
+                    type: string
+                    example: "mattturner10"
+                phone:
+                    type: integer
+                    example: 9452877662
+                email:
+                    type: string
+                    format: email
+                    example: "mattturner@gmail.com"
+
+            required:
+                - firstName
+                - lastName
+                - userName
+                - phone
+                - email
+
+        # Solution schema
+        Solution:
+            type: object
+            properties:
+                solutionSubject:
+                    type: string
+                    example: "Operate eye disease."
+                investigation:
+                    type: string
+                    example: "Diseases on the left eye and abnormal eye development and function."
+                resolution:
+                    type: string
+                    example: "Successfully operate on disease on the left eye and normal eye development and function."
+
+            required:
+                - solutionSubject
+                - investigation
+                - resolution
+
+        # Milestone schema
+        Milestone:
+            type: object
+            properties:
+                mileStoneId:
+                    type: string
+                    format: uuid
+                    example: "30027811-1ddb-4135-bb94-3a68aae1491c"
+                createdAt:
+                    type: string
+                    format: date-time
+                    example: "2022-10-21T01:12:23.926Z"
+                description:
+                    type: string
+                    example: "Home therapy for left eye before surgery."
+
+            required:
+                - description
+        
+        # Activity schema
+        Activity:
+            type: object
+            properties:
+                activityId:
+                    type: string
+                    format: uuid
+                    example: "a7a32579-d7c3-45ef-8b5f-8eac996db599"
+                createdAt:
+                    type: string
+                    format: date-time
+                    example: "2022-10-21T01:14:27.516Z"
+                description:
+                    type: string
+                    example: "Uploaded X-Ray report."
+            
+            required:
+                - description
