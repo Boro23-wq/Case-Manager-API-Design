@@ -4,8 +4,8 @@
 The API retrieves information about case managers and their cases.
 
 Contact Support:
-- **Name:** Sintu Boro
-- **Email:** sb394@njit.edu
+ - **Name:** Sintu Boro
+ - **Email:** sb394@njit.edu
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
 
@@ -21,32 +21,29 @@ Contact Support:
 ## Endpoints
 
 * [casemanagers](#casemanagers)
-    1. [Create a case manager.](#1-create-a-case-manager)
+    1. [{id}](#1-id)
+    1. [Create a case manager.](#2-create-a-case-manager)
         * [Successfully created case manager.](#i-example-request-successfully-created-case-manager)
         * [Bad request. Required fields are missing.](#ii-example-request-bad-request-required-fields-are-missing)
         * [Not found.](#iii-example-request-not-found)
         * [Internal Server Error. Please try again later](#iv-example-request-internal-server-error-please-try-again-later)
-    1. [Find all case managers.](#2-find-all-case-managers)
+    1. [Find all case managers.](#3-find-all-case-managers)
         * [Successfully retrieved all the case managers.](#i-example-request-successfully-retrieved-all-the-case-managers)
         * [Bad request.](#ii-example-request-bad-request)
         * [Not found.](#iii-example-request-not-found-1)
         * [Internal Server Error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-1)
-* [casemanager/{id}](#casemanagerid)
-    1. [Find case manager by ID.](#1-find-case-manager-by-id)
-        * [Successfully retrieved case manager.](#i-example-request-successfully-retrieved-case-manager)
-        * [Sorry! Couldn't find case manager with the ID provided.](#ii-example-request-sorry-couldnt-find-case-manager-with-the-id-provided)
-        * [Sorry! Case manager with the ID not found.](#iii-example-request-sorry-case-manager-with-the-id-not-found)
-        * [Internal server error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-2)
-    1. [Update a case manager.](#2-update-a-case-manager)
-        * [Successfully updated case manager with the provided ID.](#i-example-request-successfully-updated-case-manager-with-the-provided-id)
-        * [Sorry! Couldn't find case manager with the ID provided.](#ii-example-request-sorry-couldnt-find-case-manager-with-the-id-provided-1)
-        * [Sorry! Case manager with the ID not found.](#iii-example-request-sorry-case-manager-with-the-id-not-found-1)
-        * [Internal server error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-3)
-    1. [Delete a case manager.](#3-delete-a-case-manager)
-        * [Case manager deleted sucessfully.](#i-example-request-case-manager-deleted-sucessfully)
-        * [Sorry! Couldn't find case manager with the ID provided.](#ii-example-request-sorry-couldnt-find-case-manager-with-the-id-provided-2)
-        * [Sorry! Case manager with the ID not found.](#iii-example-request-sorry-case-manager-with-the-id-not-found-2)
-        * [Internal server error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-4)
+* [cases](#cases)
+    1. [{id}](#1-id-1)
+    1. [Create a case.](#2-create-a-case)
+        * [Successfully created case.](#i-example-request-successfully-created-case)
+        * [Bad request. Required fields are missing.](#ii-example-request-bad-request-required-fields-are-missing-1)
+        * [Not found.](#iii-example-request-not-found-2)
+        * [Internal Server Error. Please try again later](#iv-example-request-internal-server-error-please-try-again-later-2)
+    1. [Find all cases.](#3-find-all-cases)
+        * [Successfully retrieved all the cases.](#i-example-request-successfully-retrieved-all-the-cases)
+        * [Bad request.](#ii-example-request-bad-request-1)
+        * [Not found.](#iii-example-request-not-found-3)
+        * [Internal Server Error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-3)
 
 --------
 
@@ -56,10 +53,24 @@ Contact Support:
 
 
 
-### 1. Create a case manager.
+### 1. {id}
 
 
-Creates a new case manager using the input provided and add it to the system.
+
+***Endpoint:***
+
+```bash
+Method: 
+Type: 
+URL: 
+```
+
+
+
+### 2. Create a case manager.
+
+
+Create a new case manager using the input provided and add it to the system.
 
 
 ***Endpoint:***
@@ -94,73 +105,111 @@ URL: {{baseUrl}}/casemanagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "cupidat",
-      "category": "quis dolore id exercitation",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
     },
     {
-      "status": "non sunt quis dolor reprehenderit",
-      "category": "deserunt in",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
@@ -192,73 +241,111 @@ URL: {{baseUrl}}/casemanagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
@@ -282,73 +369,111 @@ URL: {{baseUrl}}/casemanagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
@@ -382,73 +507,111 @@ URL: {{baseUrl}}/casemanagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
@@ -483,73 +646,111 @@ URL: {{baseUrl}}/casemanagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
@@ -584,73 +785,111 @@ URL: {{baseUrl}}/casemanagers
   "modifiedAt": "2021-01-31T08:30:00Z",
   "cases": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
+      "status": "Active",
+      "category": "Eye",
       "severity": "0-Critical Impact",
       "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
+      "patientDetail": {
+        "firstName": "Matt",
+        "lastName": "Turner",
+        "userName": "mattturner10",
+        "phone": 9452877662,
+        "email": "mattturner@gmail.com",
+        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+      },
+      "solution": {
+        "solutionSubject": "Operate eye disease.",
+        "investigation": "Diseases on the left eye and abnormal eye development and function.",
+        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+      },
       "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
       "createdAt": "2021-03-30T08:30:00Z",
       "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
+      "assignedTo": {
+        "firstName": "Katherine",
+        "lastName": "Marshall",
+        "phone": 8452877665,
+        "email": "kathmarshall@hm.io",
+        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+        "assignedOn": "2021-03-30T08:30:00Z",
+        "profession": "Ophthalmologists"
+      },
       "milestones": [
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         },
         {
           "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
           "createdAt": "2022-10-21T01:12:23.926Z"
         }
       ],
       "activities": [
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         },
         {
           "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
           "createdAt": "2022-10-21T01:14:27.516Z"
         }
       ]
@@ -667,7 +906,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-### 2. Find all case managers.
+### 3. Find all case managers.
 
 
 Get all the case managers and their cases recorded in the system.
@@ -694,8 +933,8 @@ URL: {{baseUrl}}/casemanagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | -83641149 | Page number to paginate. |
-| perPage | -83641149 | Total items to retrive at once. |
+| page | 1 | Page number to paginate. |
+| perPage | 10 | Total items to retrive at once. |
 
 
 
@@ -710,8 +949,8 @@ URL: {{baseUrl}}/casemanagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | -83641149 |  |
-| perPage | -83641149 |  |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -733,73 +972,111 @@ URL: {{baseUrl}}/casemanagers
     "modifiedAt": "2021-01-31T08:30:00Z",
     "cases": [
       {
-        "status": "qui dolor culpa aliquip",
-        "category": "magna nisi culpa c",
+        "status": "Active",
+        "category": "Eye",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
-        "patientDetail": {},
-        "solution": {},
+        "patientDetail": {
+          "firstName": "Matt",
+          "lastName": "Turner",
+          "userName": "mattturner10",
+          "phone": 9452877662,
+          "email": "mattturner@gmail.com",
+          "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+        },
+        "solution": {
+          "solutionSubject": "Operate eye disease.",
+          "investigation": "Diseases on the left eye and abnormal eye development and function.",
+          "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+        },
         "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
         "createdAt": "2021-03-30T08:30:00Z",
         "modifiedAt": "2021-04-28T08:30:00Z",
-        "assignedTo": {},
+        "assignedTo": {
+          "firstName": "Katherine",
+          "lastName": "Marshall",
+          "phone": 8452877665,
+          "email": "kathmarshall@hm.io",
+          "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+          "assignedOn": "2021-03-30T08:30:00Z",
+          "profession": "Ophthalmologists"
+        },
         "milestones": [
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           },
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           }
         ],
         "activities": [
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           },
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
         ]
       },
       {
-        "status": "pariatur magna enim laborum voluptate",
-        "category": "nostrud mollit aliquip",
+        "status": "Active",
+        "category": "Eye",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
-        "patientDetail": {},
-        "solution": {},
+        "patientDetail": {
+          "firstName": "Matt",
+          "lastName": "Turner",
+          "userName": "mattturner10",
+          "phone": 9452877662,
+          "email": "mattturner@gmail.com",
+          "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+        },
+        "solution": {
+          "solutionSubject": "Operate eye disease.",
+          "investigation": "Diseases on the left eye and abnormal eye development and function.",
+          "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+        },
         "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
         "createdAt": "2021-03-30T08:30:00Z",
         "modifiedAt": "2021-04-28T08:30:00Z",
-        "assignedTo": {},
+        "assignedTo": {
+          "firstName": "Katherine",
+          "lastName": "Marshall",
+          "phone": 8452877665,
+          "email": "kathmarshall@hm.io",
+          "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+          "assignedOn": "2021-03-30T08:30:00Z",
+          "profession": "Ophthalmologists"
+        },
         "milestones": [
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           },
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           }
         ],
         "activities": [
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           },
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
         ]
@@ -817,73 +1094,111 @@ URL: {{baseUrl}}/casemanagers
     "modifiedAt": "2021-01-31T08:30:00Z",
     "cases": [
       {
-        "status": "ullamco",
-        "category": "sint cupidatat Lore",
+        "status": "Active",
+        "category": "Eye",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
-        "patientDetail": {},
-        "solution": {},
+        "patientDetail": {
+          "firstName": "Matt",
+          "lastName": "Turner",
+          "userName": "mattturner10",
+          "phone": 9452877662,
+          "email": "mattturner@gmail.com",
+          "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+        },
+        "solution": {
+          "solutionSubject": "Operate eye disease.",
+          "investigation": "Diseases on the left eye and abnormal eye development and function.",
+          "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+        },
         "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
         "createdAt": "2021-03-30T08:30:00Z",
         "modifiedAt": "2021-04-28T08:30:00Z",
-        "assignedTo": {},
+        "assignedTo": {
+          "firstName": "Katherine",
+          "lastName": "Marshall",
+          "phone": 8452877665,
+          "email": "kathmarshall@hm.io",
+          "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+          "assignedOn": "2021-03-30T08:30:00Z",
+          "profession": "Ophthalmologists"
+        },
         "milestones": [
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           },
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           }
         ],
         "activities": [
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           },
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
         ]
       },
       {
-        "status": "reprehenderit ex",
-        "category": "ea esse dolor fugiat",
+        "status": "Active",
+        "category": "Eye",
         "severity": "0-Critical Impact",
         "subject": "Operation follow-up",
-        "patientDetail": {},
-        "solution": {},
+        "patientDetail": {
+          "firstName": "Matt",
+          "lastName": "Turner",
+          "userName": "mattturner10",
+          "phone": 9452877662,
+          "email": "mattturner@gmail.com",
+          "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+        },
+        "solution": {
+          "solutionSubject": "Operate eye disease.",
+          "investigation": "Diseases on the left eye and abnormal eye development and function.",
+          "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+        },
         "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
         "createdAt": "2021-03-30T08:30:00Z",
         "modifiedAt": "2021-04-28T08:30:00Z",
-        "assignedTo": {},
+        "assignedTo": {
+          "firstName": "Katherine",
+          "lastName": "Marshall",
+          "phone": 8452877665,
+          "email": "kathmarshall@hm.io",
+          "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+          "assignedOn": "2021-03-30T08:30:00Z",
+          "profession": "Ophthalmologists"
+        },
         "milestones": [
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           },
           {
             "description": "Home therapy for left eye before surgery.",
-            "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
+            "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
             "createdAt": "2022-10-21T01:12:23.926Z"
           }
         ],
         "activities": [
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           },
           {
             "description": "Uploaded X-Ray report.",
-            "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
         ]
@@ -908,8 +1223,8 @@ URL: {{baseUrl}}/casemanagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | -83641149 |  |
-| perPage | -83641149 |  |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -931,8 +1246,8 @@ URL: {{baseUrl}}/casemanagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | -83641149 |  |
-| perPage | -83641149 |  |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -954,8 +1269,8 @@ URL: {{baseUrl}}/casemanagers
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| page | -83641149 |  |
-| perPage | -83641149 |  |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -969,233 +1284,36 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-## casemanager/{id}
+## cases
 
 
 
-### 1. Find case manager by ID.
+### 1. {id}
 
-
-Returns a single case manager with the provided ID.
 
 
 ***Endpoint:***
 
 ```bash
-Method: GET
+Method: 
 Type: 
-URL: {{baseUrl}}/casemanager/:id
+URL: 
 ```
 
 
-***Headers:***
 
-| Key | Value | Description |
-| --- | ------|-------------|
-| Accept | application/json |  |
+### 2. Create a case.
 
 
-
-***URL variables:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of case manager to return. |
-
-
-
-***More example Requests/Responses:***
-
-
-#### I. Example Request: Successfully retrieved case manager.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of case manager to return. |
-
-
-
-***Body: None***
-
-
-
-#### I. Example Response: Successfully retrieved case manager.
-```js
-{
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
-}
-```
-
-
-***Status Code:*** 200
-
-<br>
-
-
-
-#### II. Example Request: Sorry! Couldn't find case manager with the ID provided.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of case manager to return. |
-
-
-
-***Body: None***
-
-
-
-***Status Code:*** 400
-
-<br>
-
-
-
-#### III. Example Request: Sorry! Case manager with the ID not found.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of case manager to return. |
-
-
-
-***Body: None***
-
-
-
-***Status Code:*** 404
-
-<br>
-
-
-
-#### IV. Example Request: Internal server error. Please try again later.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of case manager to return. |
-
-
-
-***Body: None***
-
-
-
-***Status Code:*** 500
-
-<br>
-
-
-
-### 2. Update a case manager.
-
-
-Update details of a case manager using ID.
+Create a new case using the input provided and add it to the system.
 
 
 ***Endpoint:***
 
 ```bash
-Method: PUT
+Method: POST
 Type: RAW
-URL: {{baseUrl}}/casemanager/:id
+URL: {{baseUrl}}/cases
 ```
 
 
@@ -1208,98 +1326,61 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-***URL variables:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be updated. |
-
-
-
 ***Body:***
 
 ```js        
 {
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
+  "status": "Active",
+  "category": "Eye",
+  "severity": "0-Critical Impact",
+  "subject": "Operation follow-up",
+  "patientDetail": {
+    "firstName": "Matt",
+    "lastName": "Turner",
+    "userName": "mattturner10",
+    "phone": 9452877662,
+    "email": "mattturner@gmail.com",
+    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+  },
+  "solution": {
+    "solutionSubject": "Operate eye disease.",
+    "investigation": "Diseases on the left eye and abnormal eye development and function.",
+    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+  },
+  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+  "createdAt": "2021-03-30T08:30:00Z",
+  "modifiedAt": "2021-04-28T08:30:00Z",
+  "assignedTo": {
+    "firstName": "Katherine",
+    "lastName": "Marshall",
+    "phone": 8452877665,
+    "email": "kathmarshall@hm.io",
+    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+    "assignedOn": "2021-03-30T08:30:00Z",
+    "profession": "Ophthalmologists"
+  },
+  "milestones": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
+    }
+  ],
+  "activities": [
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
     }
   ]
 }
@@ -1310,15 +1391,7 @@ URL: {{baseUrl}}/casemanager/:id
 ***More example Requests/Responses:***
 
 
-#### I. Example Request: Successfully updated case manager with the provided ID.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be updated. |
+#### I. Example Request: Successfully created case.
 
 
 
@@ -1326,86 +1399,57 @@ URL: {{baseUrl}}/casemanager/:id
 
 ```js        
 {
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
+  "status": "Active",
+  "category": "Eye",
+  "severity": "0-Critical Impact",
+  "subject": "Operation follow-up",
+  "patientDetail": {
+    "firstName": "Matt",
+    "lastName": "Turner",
+    "userName": "mattturner10",
+    "phone": 9452877662,
+    "email": "mattturner@gmail.com",
+    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+  },
+  "solution": {
+    "solutionSubject": "Operate eye disease.",
+    "investigation": "Diseases on the left eye and abnormal eye development and function.",
+    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+  },
+  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+  "createdAt": "2021-03-30T08:30:00Z",
+  "modifiedAt": "2021-04-28T08:30:00Z",
+  "assignedTo": {
+    "firstName": "Katherine",
+    "lastName": "Marshall",
+    "phone": 8452877665,
+    "email": "kathmarshall@hm.io",
+    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+    "assignedOn": "2021-03-30T08:30:00Z",
+    "profession": "Ophthalmologists"
+  },
+  "milestones": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
+    }
+  ],
+  "activities": [
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
     }
   ]
 }
@@ -1413,89 +1457,60 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### I. Example Response: Successfully updated case manager with the provided ID.
+#### I. Example Response: Successfully created case.
 ```js
 {
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
+  "status": "Active",
+  "category": "Eye",
+  "severity": "0-Critical Impact",
+  "subject": "Operation follow-up",
+  "patientDetail": {
+    "firstName": "Matt",
+    "lastName": "Turner",
+    "userName": "mattturner10",
+    "phone": 9452877662,
+    "email": "mattturner@gmail.com",
+    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+  },
+  "solution": {
+    "solutionSubject": "Operate eye disease.",
+    "investigation": "Diseases on the left eye and abnormal eye development and function.",
+    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+  },
+  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+  "createdAt": "2021-03-30T08:30:00Z",
+  "modifiedAt": "2021-04-28T08:30:00Z",
+  "assignedTo": {
+    "firstName": "Katherine",
+    "lastName": "Marshall",
+    "phone": 8452877665,
+    "email": "kathmarshall@hm.io",
+    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+    "assignedOn": "2021-03-30T08:30:00Z",
+    "profession": "Ophthalmologists"
+  },
+  "milestones": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
+    }
+  ],
+  "activities": [
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
     }
   ]
 }
@@ -1508,15 +1523,7 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### II. Example Request: Sorry! Couldn't find case manager with the ID provided.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be updated. |
+#### II. Example Request: Bad request. Required fields are missing.
 
 
 
@@ -1524,86 +1531,57 @@ URL: {{baseUrl}}/casemanager/:id
 
 ```js        
 {
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
+  "status": "Active",
+  "category": "Eye",
+  "severity": "0-Critical Impact",
+  "subject": "Operation follow-up",
+  "patientDetail": {
+    "firstName": "Matt",
+    "lastName": "Turner",
+    "userName": "mattturner10",
+    "phone": 9452877662,
+    "email": "mattturner@gmail.com",
+    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+  },
+  "solution": {
+    "solutionSubject": "Operate eye disease.",
+    "investigation": "Diseases on the left eye and abnormal eye development and function.",
+    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+  },
+  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+  "createdAt": "2021-03-30T08:30:00Z",
+  "modifiedAt": "2021-04-28T08:30:00Z",
+  "assignedTo": {
+    "firstName": "Katherine",
+    "lastName": "Marshall",
+    "phone": 8452877665,
+    "email": "kathmarshall@hm.io",
+    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+    "assignedOn": "2021-03-30T08:30:00Z",
+    "profession": "Ophthalmologists"
+  },
+  "milestones": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
+    }
+  ],
+  "activities": [
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
     }
   ]
 }
@@ -1617,15 +1595,7 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### III. Example Request: Sorry! Case manager with the ID not found.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be updated. |
+#### III. Example Request: Not found.
 
 
 
@@ -1633,86 +1603,57 @@ URL: {{baseUrl}}/casemanager/:id
 
 ```js        
 {
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
+  "status": "Active",
+  "category": "Eye",
+  "severity": "0-Critical Impact",
+  "subject": "Operation follow-up",
+  "patientDetail": {
+    "firstName": "Matt",
+    "lastName": "Turner",
+    "userName": "mattturner10",
+    "phone": 9452877662,
+    "email": "mattturner@gmail.com",
+    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+  },
+  "solution": {
+    "solutionSubject": "Operate eye disease.",
+    "investigation": "Diseases on the left eye and abnormal eye development and function.",
+    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+  },
+  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+  "createdAt": "2021-03-30T08:30:00Z",
+  "modifiedAt": "2021-04-28T08:30:00Z",
+  "assignedTo": {
+    "firstName": "Katherine",
+    "lastName": "Marshall",
+    "phone": 8452877665,
+    "email": "kathmarshall@hm.io",
+    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+    "assignedOn": "2021-03-30T08:30:00Z",
+    "profession": "Ophthalmologists"
+  },
+  "milestones": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
+    }
+  ],
+  "activities": [
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
     }
   ]
 }
@@ -1726,15 +1667,7 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### IV. Example Request: Internal server error. Please try again later.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be updated. |
+#### IV. Example Request: Internal Server Error. Please try again later
 
 
 
@@ -1742,86 +1675,57 @@ URL: {{baseUrl}}/casemanager/:id
 
 ```js        
 {
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
+  "status": "Active",
+  "category": "Eye",
+  "severity": "0-Critical Impact",
+  "subject": "Operation follow-up",
+  "patientDetail": {
+    "firstName": "Matt",
+    "lastName": "Turner",
+    "userName": "mattturner10",
+    "phone": 9452877662,
+    "email": "mattturner@gmail.com",
+    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+  },
+  "solution": {
+    "solutionSubject": "Operate eye disease.",
+    "investigation": "Diseases on the left eye and abnormal eye development and function.",
+    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+  },
+  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+  "createdAt": "2021-03-30T08:30:00Z",
+  "modifiedAt": "2021-04-28T08:30:00Z",
+  "assignedTo": {
+    "firstName": "Katherine",
+    "lastName": "Marshall",
+    "phone": 8452877665,
+    "email": "kathmarshall@hm.io",
+    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+    "assignedOn": "2021-03-30T08:30:00Z",
+    "profession": "Ophthalmologists"
+  },
+  "milestones": [
     {
-      "status": "cupidatat commodo reprehenderit",
-      "category": "velit",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
     },
     {
-      "status": "nulla in",
-      "category": "dolore magna enim ipsum dolore",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {},
-      "solution": {},
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {},
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "mileStoneId": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "activityId": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
+      "description": "Home therapy for left eye before surgery.",
+      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+      "createdAt": "2022-10-21T01:12:23.926Z"
+    }
+  ],
+  "activities": [
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "description": "Uploaded X-Ray report.",
+      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
     }
   ]
 }
@@ -1835,18 +1739,18 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-### 3. Delete a case manager.
+### 3. Find all cases.
 
 
-Delete an existing case manager.
+Get all the cases recorded in the system.
 
 
 ***Endpoint:***
 
 ```bash
-Method: DELETE
+Method: GET
 Type: 
-URL: {{baseUrl}}/casemanager/:id
+URL: {{baseUrl}}/cases
 ```
 
 
@@ -1858,18 +1762,19 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-***URL variables:***
+***Query params:***
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be deleted. |
+| page | 1 | Page number to paginate. |
+| perPage | 10 | Total items to retrive at once. |
 
 
 
 ***More example Requests/Responses:***
 
 
-#### I. Example Request: Case manager deleted sucessfully.
+#### I. Example Request: Successfully retrieved all the cases.
 
 
 
@@ -1877,7 +1782,8 @@ URL: {{baseUrl}}/casemanager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be deleted. |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -1885,19 +1791,130 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### I. Example Response: Case manager deleted sucessfully.
+#### I. Example Response: Successfully retrieved all the cases.
 ```js
-"290cdddc-31af-481c-9000-2ab4eabeebaf"
+[
+  {
+    "status": "Active",
+    "category": "Eye",
+    "severity": "0-Critical Impact",
+    "subject": "Operation follow-up",
+    "patientDetail": {
+      "firstName": "Matt",
+      "lastName": "Turner",
+      "userName": "mattturner10",
+      "phone": 9452877662,
+      "email": "mattturner@gmail.com",
+      "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+    },
+    "solution": {
+      "solutionSubject": "Operate eye disease.",
+      "investigation": "Diseases on the left eye and abnormal eye development and function.",
+      "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+    },
+    "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+    "createdAt": "2021-03-30T08:30:00Z",
+    "modifiedAt": "2021-04-28T08:30:00Z",
+    "assignedTo": {
+      "firstName": "Katherine",
+      "lastName": "Marshall",
+      "phone": 8452877665,
+      "email": "kathmarshall@hm.io",
+      "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+      "assignedOn": "2021-03-30T08:30:00Z",
+      "profession": "Ophthalmologists"
+    },
+    "milestones": [
+      {
+        "description": "Home therapy for left eye before surgery.",
+        "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+        "createdAt": "2022-10-21T01:12:23.926Z"
+      },
+      {
+        "description": "Home therapy for left eye before surgery.",
+        "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+        "createdAt": "2022-10-21T01:12:23.926Z"
+      }
+    ],
+    "activities": [
+      {
+        "description": "Uploaded X-Ray report.",
+        "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      },
+      {
+        "description": "Uploaded X-Ray report.",
+        "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      }
+    ]
+  },
+  {
+    "status": "Active",
+    "category": "Eye",
+    "severity": "0-Critical Impact",
+    "subject": "Operation follow-up",
+    "patientDetail": {
+      "firstName": "Matt",
+      "lastName": "Turner",
+      "userName": "mattturner10",
+      "phone": 9452877662,
+      "email": "mattturner@gmail.com",
+      "id": "46005a82-a612-4dc1-9279-7215df6895cd"
+    },
+    "solution": {
+      "solutionSubject": "Operate eye disease.",
+      "investigation": "Diseases on the left eye and abnormal eye development and function.",
+      "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
+    },
+    "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
+    "createdAt": "2021-03-30T08:30:00Z",
+    "modifiedAt": "2021-04-28T08:30:00Z",
+    "assignedTo": {
+      "firstName": "Katherine",
+      "lastName": "Marshall",
+      "phone": 8452877665,
+      "email": "kathmarshall@hm.io",
+      "id": "26005a82-a612-4dc1-9279-7215df6895cd",
+      "assignedOn": "2021-03-30T08:30:00Z",
+      "profession": "Ophthalmologists"
+    },
+    "milestones": [
+      {
+        "description": "Home therapy for left eye before surgery.",
+        "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+        "createdAt": "2022-10-21T01:12:23.926Z"
+      },
+      {
+        "description": "Home therapy for left eye before surgery.",
+        "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
+        "createdAt": "2022-10-21T01:12:23.926Z"
+      }
+    ],
+    "activities": [
+      {
+        "description": "Uploaded X-Ray report.",
+        "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      },
+      {
+        "description": "Uploaded X-Ray report.",
+        "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      }
+    ]
+  }
+]
 ```
 
 
-***Status Code:*** 204
+***Status Code:*** 200
 
 <br>
 
 
 
-#### II. Example Request: Sorry! Couldn't find case manager with the ID provided.
+#### II. Example Request: Bad request.
 
 
 
@@ -1905,7 +1922,8 @@ URL: {{baseUrl}}/casemanager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be deleted. |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -1919,7 +1937,7 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### III. Example Request: Sorry! Case manager with the ID not found.
+#### III. Example Request: Not found.
 
 
 
@@ -1927,7 +1945,8 @@ URL: {{baseUrl}}/casemanager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be deleted. |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -1941,7 +1960,7 @@ URL: {{baseUrl}}/casemanager/:id
 
 
 
-#### IV. Example Request: Internal server error. Please try again later.
+#### IV. Example Request: Internal Server Error. Please try again later.
 
 
 
@@ -1949,7 +1968,8 @@ URL: {{baseUrl}}/casemanager/:id
 
 | Key | Value | Description |
 | --- | ------|-------------|
-| id | -19178032 | (Required) ID of the case manager to be deleted. |
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -1966,4 +1986,4 @@ URL: {{baseUrl}}/casemanager/:id
 ---
 [Back to top](#case-manager-api-collection)
 
->Generated at 2022-10-20 22:30:56 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2022-10-24 18:22:51 by [docgen](https://github.com/thedevsaddam/docgen)
