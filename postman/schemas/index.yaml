@@ -11,18 +11,23 @@ info:
 servers:
     - description: Postman API for case managers
       url: http://localhost:3000
+    
 tags:
     - name: case-manager
       description: API endpoints to access case managers in the system
+    - name: case
+      description: API endpoints to access cases in the system
 
 paths:
+    # Case Manager endpoints
     /casemanagers:
+        description: API endpoints for case managers.
         # @POST /casemanagers
         post:
             tags:
                 - case-manager
             summary: Create a case manager.
-            description: Creates a new case manager using the input provided and add it to the system.
+            description: Create a new case manager using the input provided and add it to the system.
             operationId: createCaseManager
 
             responses:
@@ -60,11 +65,13 @@ paths:
                   description: Page number to paginate.
                   schema:
                       type: integer
+                      default: 1
                 - name: perPage
                   in: query
                   description: Total items to retrive at once.
                   schema:
                       type: integer
+                      default: 10
 
             responses:
                 "200":
@@ -82,7 +89,7 @@ paths:
                 "500":
                     description: Internal Server Error. Please try again later.
 
-    /casemanager/{id}:
+    /casemanagers/{id}:
         # @GET /casemanager/{id}
         get:
             tags:
@@ -97,7 +104,7 @@ paths:
                   required: true
                   schema:
                       type: integer
-                      format: uuid
+                      format: int64
             responses:
                 "200":
                     description: Successfully retrieved case manager.
@@ -126,7 +133,7 @@ paths:
                   required: true
                   schema:
                       type: integer
-                      format: uuid
+                      format: int64
 
             responses:
                 "201":
@@ -164,7 +171,7 @@ paths:
                   required: true
                   schema:
                       type: integer
-                      format: uuid
+                      format: int64
             responses:
                 "204":
                     description: Case manager deleted sucessfully.
@@ -172,12 +179,182 @@ paths:
                         application/json:
                             schema:
                                 type: string
-                                format: uuid
+                                format: int64
                                 example: "290cdddc-31af-481c-9000-2ab4eabeebaf"
                 "400":
                     description: Sorry! Couldn't find case manager with the ID provided.
                 "404":
                     description: Sorry! Case manager with the ID not found.
+                "500":
+                    description: Internal server error. Please try again later.
+
+    # Case endpoints
+    /cases:
+        description: API endpoints for cases.
+        # @POST /cases
+        post:
+            tags:
+                - case
+            summary: Create a case.
+            description: Create a new case using the input provided and add it to the system.
+            operationId: createCase
+
+            responses:
+                "201":
+                    description: Successfully created case.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Case"
+                "400":
+                    description: Bad request. Required fields are missing.
+                "404":
+                    description: Not found.
+                "500":
+                    description: Internal Server Error. Please try again later
+
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Case"
+                description: Created case object.
+                required: true
+
+        # @GET /cases
+        get:
+            tags:
+                - case
+            summary: Find all cases.
+            description: Get all the cases recorded in the system.
+            operationId: getCases
+            parameters:
+                - name: page
+                  in: query
+                  description: Page number to paginate.
+                  schema:
+                      type: integer
+                      default: 1
+                - name: perPage
+                  in: query
+                  description: Total items to retrive at once.
+                  schema:
+                      type: integer
+                      default: 10
+
+            responses:
+                "200":
+                    description: Successfully retrieved all the cases.
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/Case"
+                "400":
+                    description: Bad request.
+                "404":
+                    description: Not found.
+                "500":
+                    description: Internal Server Error. Please try again later.
+
+
+    /cases/{id}:
+        # @GET /cases/{id}
+        get:
+            tags:
+                - case
+            summary: Find case by ID.
+            description: Returns a single case with the provided ID.
+            operationId: getCaseByID
+            parameters:
+                - name: id
+                  in: path
+                  description: ID of case to return.
+                  required: true
+                  schema:
+                      type: integer
+                      format: int64
+            responses:
+                "200":
+                    description: Successfully retrieved case.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Case"
+                "400":
+                    description: Sorry! Couldn't find case with the ID provided.
+                "404":
+                    description: Sorry! Case with the ID not found.
+                "500":
+                    description: Internal server error. Please try again later.
+
+        # @PUT /case/{id}
+        put:
+            tags:
+                - case
+            summary: Update a case.
+            description: Update details of a case using ID.
+            operationId: updateCase
+            parameters:
+                - name: id
+                  in: path
+                  description: ID of the case to be updated.
+                  required: true
+                  schema:
+                      type: integer
+                      format: int64
+
+            responses:
+                "201":
+                    description: Successfully updated case with the provided ID.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Case"
+                "400":
+                    description:  Sorry! Couldn't find case with the ID provided.
+                "404":
+                    description: Sorry! Case with the ID not found.
+                "500":
+                    description: Internal server error. Please try again later.
+
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Case"
+                description: Updated case object with the ID provided.
+                required: true
+
+        # @DELETE /cases/{id}
+        delete:
+            tags:
+                - case
+            summary: Delete a case.
+            description: Delete an existing case.
+            operationId: deleteCase
+            parameters:
+                - name: id
+                  in: path
+                  description: ID of the case to be deleted.
+                  required: true
+                  schema:
+                      type: integer
+                      format: int64
+            responses:
+                "204":
+                    description: Case deleted sucessfully.
+                    content:
+                        application/json:
+                            schema:
+                                type: string
+                                format: int64
+                                example: "290cdddc-31af-481c-9000-2ab4eabeebaf"
+                "400":
+                    description: Sorry! Couldn't find case with the ID provided.
+                "404":
+                    description: Sorry! Case with the ID not found.
                 "500":
                     description: Internal server error. Please try again later.
 
@@ -190,7 +367,7 @@ components:
             properties:
                 caseManagerId:
                     type: string
-                    format: uuid
+                    format: int64
                     example: "378cdddc-31af-481c-9000-2ab4eabeebaf"
                 createdAt:
                     type: string
@@ -234,7 +411,7 @@ components:
             properties:
                 caseId:
                     type: string
-                    format: uuid
+                    format: int64
                     example: "36005a82-a612-4dc1-9279-7215df6895cd"
                 createdAt:
                     type: string
@@ -246,13 +423,13 @@ components:
                     example: "2021-04-28T08:30:00Z"
                 status:
                     type: string
+                    example: Active
                 category:
                     type: string
+                    example: Eye
                 assignedTo:
-                    type: object
                     nullable: true
-                    items:
-                        $ref: "#/components/schemas/Assignee"
+                    $ref: "#/components/schemas/Assignee"
                 severity:
                     type: string
                     example: "0-Critical Impact"
@@ -260,13 +437,9 @@ components:
                     type: string
                     example: "Operation follow-up"
                 patientDetail:
-                    type: object
-                    items:
-                        $ref: "#/components/schemas/Patient"
+                    $ref: "#/components/schemas/Patient"
                 solution:
-                    type: object
-                    items:
-                        $ref: "#/components/schemas/Solution"
+                    $ref: "#/components/schemas/Solution"
                 milestones:
                     type: array
                     items:
@@ -290,8 +463,8 @@ components:
             properties:
                 id:
                     type: string
-                    format: uuid
-                    example: "205605a82-a612-4dc1-9279-7215df6895cd"
+                    format: int64
+                    example: "26005a82-a612-4dc1-9279-7215df6895cd"
                 firstName:
                     type: string
                     example: "Katherine"
@@ -324,10 +497,10 @@ components:
         Patient:
             type: object
             properties:
-                patientId:
+                id:
                     type: string
-                    format: uuid
-                    example: "205605a82-a612-4dc1-9279-7215df6895cd"
+                    format: int64
+                    example: "46005a82-a612-4dc1-9279-7215df6895cd"
                 firstName:
                     type: string
                     example: "Matt"
@@ -375,9 +548,9 @@ components:
         Milestone:
             type: object
             properties:
-                mileStoneId:
+                id:
                     type: string
-                    format: uuid
+                    format: int64
                     example: "30027811-1ddb-4135-bb94-3a68aae1491c"
                 createdAt:
                     type: string
@@ -394,9 +567,9 @@ components:
         Activity:
             type: object
             properties:
-                activityId:
+                id:
                     type: string
-                    format: uuid
+                    format: int64
                     example: "a7a32579-d7c3-45ef-8b5f-8eac996db599"
                 createdAt:
                     type: string
@@ -409,6 +582,7 @@ components:
             required:
                 - description
 
+        # Pagination schema
         PaginatedResult:
             type: object
             properties:
