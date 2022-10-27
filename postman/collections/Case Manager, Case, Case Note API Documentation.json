@@ -1,0 +1,2827 @@
+{
+	"info": {
+		"_postman_id": "e9352b4c-7340-4765-a45e-f96fc3b9d101",
+		"name": "Case Manager, Case, Case Note API Documentation",
+		"description": "The API retrieves information about case managers and their cases.\n\nContact Support:\n Name: Sintu Boro\n Email: sb394@njit.edu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23943499-e9352b4c-7340-4765-a45e-f96fc3b9d101"
+	},
+	"item": [
+		{
+			"name": "casemanagers",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Find case manager by ID.",
+							"id": "7d988a28-7482-4aae-9c84-6b01006b888b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-34658363",
+											"description": "(Required) ID of case manager to be returned."
+										}
+									]
+								},
+								"description": "Returns a single case manager with the provided ID."
+							},
+							"response": [
+								{
+									"id": "ea91bc7d-7f5e-41b0-827d-853415359354",
+									"name": "Successfully retrieved case manager.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of case manager to be returned."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
+								},
+								{
+									"id": "85a6ebcd-1da9-4fda-aeac-3b418b59e75b",
+									"name": "Invalid request. Please fill the required input/inputs.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of case manager to be returned."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+								},
+								{
+									"id": "9f5a5703-2371-4dce-ae28-bd7539fdda7e",
+									"name": "Bad request. Can't find the requested resource.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of case manager to be returned."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+								},
+								{
+									"id": "20550520-b155-4f5b-94f7-65fa8868404b",
+									"name": "Internal server error. Can't fulfill the request.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of case manager to be returned."
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update a case manager.",
+							"id": "9fc25e54-6fca-49cf-80cd-20716de957a9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-34658363",
+											"description": "(Required) ID of the case manager to be updated."
+										}
+									]
+								},
+								"description": "Update details of a case manager using ID."
+							},
+							"response": [
+								{
+									"id": "b8321227-b274-4340-a247-57834e295ad4",
+									"name": "Successfully updated case manager with the provided ID.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be updated."
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
+								},
+								{
+									"id": "2e4d981a-f831-4f8a-9a40-74c7063a48f9",
+									"name": "Invalid request. Please fill the required input/inputs.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be updated."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+								},
+								{
+									"id": "616ea98f-0c8a-4d78-b958-3bee2ad40355",
+									"name": "Bad request. Can't find the requested resource.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be updated."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+								},
+								{
+									"id": "5b9b6e69-a46e-47aa-be49-b1e7059a5e73",
+									"name": "Internal server error. Can't fulfill the request.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be updated."
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a case manager.",
+							"id": "b29f5c24-c5ed-4b60-83f7-ac17b279dfc2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-34658363",
+											"description": "(Required) ID of the case manager to be deleted."
+										}
+									]
+								},
+								"description": "Delete an existing case manager."
+							},
+							"response": [
+								{
+									"id": "f53f5163-b02a-4961-a4f8-0f35969a521f",
+									"name": "Case manager deleted sucessfully.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be deleted."
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"290cdddc-31af-481c-9000-2ab4eabeebaf\""
+								},
+								{
+									"id": "512ca0b0-102d-4d9c-a87d-f7d9d7b290f3",
+									"name": "Invalid request. Please fill the required input/inputs.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+								},
+								{
+									"id": "2b0a99cb-e82e-4150-90b2-af1fd5df0709",
+									"name": "Bad request. Can't find the requested resource.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+								},
+								{
+									"id": "390779a6-98b5-485c-9d51-c9fdf3dc42e2",
+									"name": "Internal server error. Can't fulfill the request.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/casemanagers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"casemanagers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case manager to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+								}
+							]
+						}
+					],
+					"id": "91c856c9-e24b-434e-b770-048b29a9d20c"
+				},
+				{
+					"name": "Create a case manager.",
+					"id": "bb29be3c-cfdc-42e5-be1d-5393f385eece",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/casemanagers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanagers"
+							]
+						},
+						"description": "Create a new case manager using the input provided and add it to the system."
+					},
+					"response": [
+						{
+							"id": "03c393c8-ef58-44a4-af6f-b0454577733f",
+							"name": "Successfully created case manager.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\"\n}"
+						},
+						{
+							"id": "b90ff390-1fa7-4c29-84dc-dfe11093d3d1",
+							"name": "Invalid request. Please fill the required input/inputs.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+						},
+						{
+							"id": "53db724f-5a08-4c38-a30c-b87a19cc7804",
+							"name": "Bad request. Can't find the requested resource.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+						},
+						{
+							"id": "1500ec14-3064-4fda-9e35-3cc1ebc7b5ea",
+							"name": "Internal server error. Can't fulfill the request.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Find all case managers.",
+					"id": "b9e6e78c-5242-4eec-b39c-880c7e4d7b03",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/casemanagers?page=1&perPage=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"casemanagers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number to paginate."
+								},
+								{
+									"key": "perPage",
+									"value": "10",
+									"description": "Total items to retrive at once."
+								}
+							]
+						},
+						"description": "Get all the case managers and their cases recorded in the system."
+					},
+					"response": [
+						{
+							"id": "15862a58-3025-4196-a800-1446d34e815b",
+							"name": "Successfully retrieved all the case managers.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      },\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      },\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      }\n    ]\n  }\n]"
+						},
+						{
+							"id": "918549d6-dde5-437a-afa1-4b202af92163",
+							"name": "Invalid request. Please fill the required input/inputs.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+						},
+						{
+							"id": "4569f55a-2b66-45f3-bbf5-f433955d2afc",
+							"name": "Bad request. Can't find the requested resource.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+						},
+						{
+							"id": "fc0a0c5c-2bda-4b6b-88a0-1311b8f9f09b",
+							"name": "Internal server error. Can't fulfill the request.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/casemanagers?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"casemanagers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+						}
+					]
+				}
+			],
+			"id": "74698c66-94c5-485c-989e-4c0896f82356"
+		},
+		{
+			"name": "cases",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "notes",
+							"item": [
+								{
+									"name": "Case note.",
+									"id": "d1e972e4-0bb4-4506-a831-7d3e477232ea",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id/notes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id",
+												"notes"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) Note to be added to the case."
+												}
+											]
+										},
+										"description": "Add a case note."
+									},
+									"response": [
+										{
+											"id": "165a55bf-4c49-4a44-81d4-c41fa78905e1",
+											"name": "Added case note sucessfully.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be added to the case."
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"statusMessage\": \"Successfully added a case note.\"\n}"
+										},
+										{
+											"id": "2648e00a-ffb4-453a-9811-53e7e628357f",
+											"name": "Invalid request. Please fill the required input/inputs.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be added to the case."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+										},
+										{
+											"id": "27ee39b1-d6cc-48bb-924b-c1038c782279",
+											"name": "Bad request. Can't find the requested resource.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be added to the case."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+										},
+										{
+											"id": "2722d937-af74-48cb-9d87-3bb359b722f4",
+											"name": "Internal server error. Can't fulfill the request.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be added to the case."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Case note.",
+									"id": "a7d326b7-d478-429d-afab-3a3664a1518e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id/notes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id",
+												"notes"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) Note id to be retrieved."
+												}
+											]
+										},
+										"description": "Add a case note."
+									},
+									"response": [
+										{
+											"id": "b79d3aa1-70cc-4392-a157-95dab61296a7",
+											"name": "Added case note sucessfully.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note id to be retrieved."
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"statusMessage\": \"Successfully added a case note.\"\n}"
+										},
+										{
+											"id": "4d13e340-78f0-48ae-a0a0-59eacbbd5f55",
+											"name": "Invalid request. Please fill the required input/inputs.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note id to be retrieved."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+										},
+										{
+											"id": "302a8959-36c3-46c4-a39e-71c55abb4038",
+											"name": "Bad request. Can't find the requested resource.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note id to be retrieved."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+										},
+										{
+											"id": "47452311-1e0e-4f2f-82ef-0e77e16122d9",
+											"name": "Internal server error. Can't fulfill the request.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note id to be retrieved."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Case note.",
+									"id": "a05e4d7d-722e-45d3-b1e9-919936e0de7a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id/notes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id",
+												"notes"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) Note to be updated."
+												}
+											]
+										},
+										"description": "Add a case note."
+									},
+									"response": [
+										{
+											"id": "3d318fab-2669-48ab-bc04-9be89a9854a9",
+											"name": "Updated case note sucessfully.",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be updated."
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"statusMessage\": \"Successfully added a case note.\"\n}"
+										},
+										{
+											"id": "d15afff2-1542-42c3-9481-0185c22081d7",
+											"name": "Invalid request. Please fill the required input/inputs.",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be updated."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+										},
+										{
+											"id": "b13738d5-21c6-4192-8fb1-e59cd8456226",
+											"name": "Bad request. Can't find the requested resource.",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be updated."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+										},
+										{
+											"id": "6b27e22b-fb3b-4c64-b132-c9afbf34a929",
+											"name": "Internal server error. Can't fulfill the request.",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n  \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be updated."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Case note.",
+									"id": "12ef9077-d336-4c01-b897-95e7cab6935e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id/notes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id",
+												"notes"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) Note to be deleted from the case."
+												}
+											]
+										},
+										"description": "Delete a case note."
+									},
+									"response": [
+										{
+											"id": "f039de83-7848-44ec-bac7-09d9f8e97a6a",
+											"name": "Note deleted sucessfully.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be deleted from the case."
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "\"nf0cdddc-31af-481c-9000-2ab4eabeebaf\""
+										},
+										{
+											"id": "d313a756-c44f-4b3d-8382-295378114e8d",
+											"name": "Invalid request. Please fill the required input/inputs.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be deleted from the case."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+										},
+										{
+											"id": "502b1c5b-c1ee-4393-a6bb-9bd95ba98663",
+											"name": "Bad request. Can't find the requested resource.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be deleted from the case."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+										},
+										{
+											"id": "d4ce7ff4-6df3-44dc-8058-250a06e2417f",
+											"name": "Internal server error. Can't fulfill the request.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/cases/:id/notes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cases",
+														":id",
+														"notes"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-34658363",
+															"description": "(Required) Note to be deleted from the case."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+										}
+									]
+								}
+							],
+							"id": "69b6e7eb-62cc-4b77-b8e8-e8700522245c"
+						},
+						{
+							"name": "Find case by ID.",
+							"id": "cf1a3d4b-5fd9-49e9-867e-fbf4478f199f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cases/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-34658363",
+											"description": "(Required) ID of the case to be returned."
+										}
+									]
+								},
+								"description": "Returns a single case with the provided ID."
+							},
+							"response": [
+								{
+									"id": "7762d1a0-102d-46b9-92a3-69e390309eb3",
+									"name": "Successfully retrieved case.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be returned."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "c6aa2c8f-d9ea-46d1-8079-426727e3021f",
+									"name": "Invalid request. Please fill the required input/inputs.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be returned."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+								},
+								{
+									"id": "9458ef24-f26a-4500-9552-95b73b7a8ae1",
+									"name": "Bad request. Can't find the requested resource.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be returned."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+								},
+								{
+									"id": "b05d0555-c2f7-4670-a842-f870661ec27a",
+									"name": "Internal server error. Can't fulfill the request.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be returned."
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update a case.",
+							"id": "7d07af86-a7ce-4b0c-be3f-8d38b45eb04d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cases/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-34658363",
+											"description": "(Required) ID of the case to be updated."
+										}
+									]
+								},
+								"description": "Update details of a case using ID."
+							},
+							"response": [
+								{
+									"id": "49fb3889-dd31-4f50-9bc9-fc55650ad6ba",
+									"name": "Successfully updated case with the provided ID.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be updated."
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "6ab3b0dc-9c81-4d79-8236-2eb9561b2d92",
+									"name": "Invalid request. Please fill the required input/inputs.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be updated."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+								},
+								{
+									"id": "89a95a39-c89c-4ef4-8199-c7eb437c6584",
+									"name": "Bad request. Can't find the requested resource.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be updated."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+								},
+								{
+									"id": "a8bab8da-0e0b-4277-9c21-66cc886c6cd9",
+									"name": "Internal server error. Can't fulfill the request.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be updated."
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a case.",
+							"id": "d775aff9-afe5-4ff4-912c-85ec302732d1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cases/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-34658363",
+											"description": "(Required) ID of the case to be deleted."
+										}
+									]
+								},
+								"description": "Delete an existing case."
+							},
+							"response": [
+								{
+									"id": "eeda3826-0c46-44c3-abd6-0e49f54b48d3",
+									"name": "Case deleted sucessfully.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be deleted."
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"290cdddc-31af-481c-9000-2ab4eabeebaf\""
+								},
+								{
+									"id": "229a08a5-0248-4845-a08d-60393d5815ec",
+									"name": "Invalid request. Please fill the required input/inputs.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+								},
+								{
+									"id": "be8e7fe8-650e-4536-a7fa-bd1f5568ee9f",
+									"name": "Bad request. Can't find the requested resource.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+								},
+								{
+									"id": "626ef313-9c19-4716-8b1f-4ce8269f298e",
+									"name": "Internal server error. Can't fulfill the request.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cases/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cases",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-34658363",
+													"description": "(Required) ID of the case to be deleted."
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+								}
+							]
+						}
+					],
+					"id": "44566916-9d1c-4410-8934-4b05fef507a5"
+				},
+				{
+					"name": "Create a case.",
+					"id": "548b2085-2158-4b4d-944b-9ec05b19ad3e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cases",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cases"
+							]
+						},
+						"description": "Create a new case using the input provided and add it to the system."
+					},
+					"response": [
+						{
+							"id": "4da74444-7177-491f-a9e1-8d2c773aecb7",
+							"name": "Successfully created case.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cases",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\"\n}"
+						},
+						{
+							"id": "54aca2b1-7c42-4836-acc9-1c53e9e19dc2",
+							"name": "Invalid request. Please fill the required input/inputs.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cases",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+						},
+						{
+							"id": "904e9c69-0b65-4502-89ab-021393f5188c",
+							"name": "Bad request. Can't find the requested resource.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cases",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+						},
+						{
+							"id": "d18eb293-f3bd-45d0-bfd6-ea679e3d9bc5",
+							"name": "Internal server error. Can't fulfill the request.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cases",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Find all cases.",
+					"id": "ab931ce8-ef73-4a1b-8bfb-e1ee96192b9a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cases?page=1&perPage=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cases"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number to paginate."
+								},
+								{
+									"key": "perPage",
+									"value": "10",
+									"description": "Total items to retrive at once."
+								}
+							]
+						},
+						"description": "Get all the cases recorded in the system."
+					},
+					"response": [
+						{
+							"id": "c671e0f8-aaad-44e5-83a7-aa64375a7f04",
+							"name": "Successfully retrieved all the cases.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cases?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"status\": \"Active\",\n    \"category\": \"Eye\",\n    \"severity\": \"0-Critical Impact\",\n    \"subject\": \"Operation follow-up\",\n    \"patientDetail\": {\n      \"firstName\": \"Matt\",\n      \"lastName\": \"Turner\",\n      \"userName\": \"mattturner10\",\n      \"phone\": 9452877662,\n      \"email\": \"mattturner@gmail.com\",\n      \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n    },\n    \"solution\": {\n      \"solutionSubject\": \"Operate eye disease.\",\n      \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n      \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n    },\n    \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n    \"createdAt\": \"2021-03-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n    \"assignedTo\": {\n      \"firstName\": \"Katherine\",\n      \"lastName\": \"Marshall\",\n      \"phone\": 8452877665,\n      \"email\": \"kathmarshall@hm.io\",\n      \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n      \"assignedOn\": \"2021-03-30T08:30:00Z\",\n      \"profession\": \"Ophthalmologists\"\n    },\n    \"milestones\": [\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      },\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      }\n    ],\n    \"activities\": [\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ],\n    \"notes\": [\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ]\n  },\n  {\n    \"status\": \"Active\",\n    \"category\": \"Eye\",\n    \"severity\": \"0-Critical Impact\",\n    \"subject\": \"Operation follow-up\",\n    \"patientDetail\": {\n      \"firstName\": \"Matt\",\n      \"lastName\": \"Turner\",\n      \"userName\": \"mattturner10\",\n      \"phone\": 9452877662,\n      \"email\": \"mattturner@gmail.com\",\n      \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n    },\n    \"solution\": {\n      \"solutionSubject\": \"Operate eye disease.\",\n      \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n      \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n    },\n    \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n    \"createdAt\": \"2021-03-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n    \"assignedTo\": {\n      \"firstName\": \"Katherine\",\n      \"lastName\": \"Marshall\",\n      \"phone\": 8452877665,\n      \"email\": \"kathmarshall@hm.io\",\n      \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n      \"assignedOn\": \"2021-03-30T08:30:00Z\",\n      \"profession\": \"Ophthalmologists\"\n    },\n    \"milestones\": [\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      },\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      }\n    ],\n    \"activities\": [\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ],\n    \"notes\": [\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ]\n  }\n]"
+						},
+						{
+							"id": "87a9b952-d4df-4dc4-bf8b-a21389823b40",
+							"name": "Invalid request. Please fill the required input/inputs.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cases?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
+						},
+						{
+							"id": "b06e009e-d056-4ed0-a89b-14f66100de23",
+							"name": "Bad request. Can't find the requested resource.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cases?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
+						},
+						{
+							"id": "dee261e8-eaef-4fb9-bb09-a4eb8999ee8c",
+							"name": "Internal server error. Can't fulfill the request.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cases?page=1&perPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cases"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 500,\n  \"description\": \"Internal server error. Can't fulfill the request.\"\n}"
+						}
+					]
+				}
+			],
+			"id": "e1999ac1-e01a-4a90-8f7e-8ae1638090b0"
+		}
+	],
+	"variable": [
+		{
+			"id": "e6e65b68-f909-4639-b2f7-fb5bf1a7f4fc",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
