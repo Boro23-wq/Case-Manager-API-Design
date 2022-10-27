@@ -1,5 +1,5 @@
 
-# Case Manager API Collection
+# Case Manager, Case, Case Note API Documentation
 
 The API retrieves information about case managers and their cases.
 
@@ -14,7 +14,8 @@ Contact Support:
 
 | Key | Value | Type |
 | --- | ------|-------------|
-| baseUrl | http://localhost:3000 | string |
+| baseUrl (dev) | http://localhost:3000 | string |
+| baseUrl (mock) | https://738ba7ae-62b5-49c6-a114-bf44e57d6b0b.mock.pstmn.io | string |
 
 
 
@@ -24,26 +25,26 @@ Contact Support:
     1. [{id}](#1-id)
     1. [Create a case manager.](#2-create-a-case-manager)
         * [Successfully created case manager.](#i-example-request-successfully-created-case-manager)
-        * [Bad request. Required fields are missing.](#ii-example-request-bad-request-required-fields-are-missing)
-        * [Not found.](#iii-example-request-not-found)
-        * [Internal Server Error. Please try again later](#iv-example-request-internal-server-error-please-try-again-later)
+        * [Invalid request. Please fill the required input/inputs.](#ii-example-request-invalid-request-please-fill-the-required-inputinputs)
+        * [Bad request. Can't find the requested resource.](#iii-example-request-bad-request-cant-find-the-requested-resource)
+        * [Internal server error. Can't fulfill the request.](#iv-example-request-internal-server-error-cant-fulfill-the-request)
     1. [Find all case managers.](#3-find-all-case-managers)
         * [Successfully retrieved all the case managers.](#i-example-request-successfully-retrieved-all-the-case-managers)
-        * [Bad request.](#ii-example-request-bad-request)
-        * [Not found.](#iii-example-request-not-found-1)
-        * [Internal Server Error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-1)
+        * [Invalid request. Please fill the required input/inputs.](#ii-example-request-invalid-request-please-fill-the-required-inputinputs-1)
+        * [Bad request. Can't find the requested resource.](#iii-example-request-bad-request-cant-find-the-requested-resource-1)
+        * [Internal server error. Can't fulfill the request.](#iv-example-request-internal-server-error-cant-fulfill-the-request-1)
 * [cases](#cases)
     1. [{id}](#1-id-1)
     1. [Create a case.](#2-create-a-case)
         * [Successfully created case.](#i-example-request-successfully-created-case)
-        * [Bad request. Required fields are missing.](#ii-example-request-bad-request-required-fields-are-missing-1)
-        * [Not found.](#iii-example-request-not-found-2)
-        * [Internal Server Error. Please try again later](#iv-example-request-internal-server-error-please-try-again-later-2)
+        * [Invalid request. Please fill the required input/inputs.](#ii-example-request-invalid-request-please-fill-the-required-inputinputs-2)
+        * [Bad request. Can't find the requested resource.](#iii-example-request-bad-request-cant-find-the-requested-resource-2)
+        * [Internal server error. Can't fulfill the request.](#iv-example-request-internal-server-error-cant-fulfill-the-request-2)
     1. [Find all cases.](#3-find-all-cases)
         * [Successfully retrieved all the cases.](#i-example-request-successfully-retrieved-all-the-cases)
-        * [Bad request.](#ii-example-request-bad-request-1)
-        * [Not found.](#iii-example-request-not-found-3)
-        * [Internal Server Error. Please try again later.](#iv-example-request-internal-server-error-please-try-again-later-3)
+        * [Invalid request. Please fill the required input/inputs.](#ii-example-request-invalid-request-please-fill-the-required-inputinputs-3)
+        * [Bad request. Can't find the requested resource.](#iii-example-request-bad-request-cant-find-the-requested-resource-3)
+        * [Internal server error. Can't fulfill the request.](#iv-example-request-internal-server-error-cant-fulfill-the-request-3)
 
 --------
 
@@ -99,122 +100,7 @@ URL: {{baseUrl}}/casemanagers
   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
+  "phone": 8623817665
 }
 ```
 
@@ -235,122 +121,7 @@ URL: {{baseUrl}}/casemanagers
   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
+  "phone": 8623817665
 }
 ```
 
@@ -366,119 +137,7 @@ URL: {{baseUrl}}/casemanagers
   "phone": 8623817665,
   "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
   "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
+  "modifiedAt": "2021-01-31T08:30:00Z"
 }
 ```
 
@@ -489,7 +148,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-#### II. Example Request: Bad request. Required fields are missing.
+#### II. Example Request: Invalid request. Please fill the required input/inputs.
 
 
 
@@ -501,125 +160,19 @@ URL: {{baseUrl}}/casemanagers
   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
+  "phone": 8623817665
 }
 ```
 
+
+
+#### II. Example Response: Invalid request. Please fill the required input/inputs.
+```js
+{
+  "statusCode": 400,
+  "description": "Invalid request. Please fill the required input/inputs."
+}
+```
 
 
 ***Status Code:*** 400
@@ -628,7 +181,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-#### III. Example Request: Not found.
+#### III. Example Request: Bad request. Can't find the requested resource.
 
 
 
@@ -640,125 +193,19 @@ URL: {{baseUrl}}/casemanagers
   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
+  "phone": 8623817665
 }
 ```
 
+
+
+#### III. Example Response: Bad request. Can't find the requested resource.
+```js
+{
+  "statusCode": 404,
+  "description": "Bad request. Can't find the requested resource."
+}
+```
 
 
 ***Status Code:*** 404
@@ -767,7 +214,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-#### IV. Example Request: Internal Server Error. Please try again later
+#### IV. Example Request: Internal server error. Can't fulfill the request.
 
 
 
@@ -779,125 +226,19 @@ URL: {{baseUrl}}/casemanagers
   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
-  "phone": 8623817665,
-  "caseManagerId": "378cdddc-31af-481c-9000-2ab4eabeebaf",
-  "createdAt": "2021-01-30T08:30:00Z",
-  "modifiedAt": "2021-01-31T08:30:00Z",
-  "cases": [
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    },
-    {
-      "status": "Active",
-      "category": "Eye",
-      "severity": "0-Critical Impact",
-      "subject": "Operation follow-up",
-      "patientDetail": {
-        "firstName": "Matt",
-        "lastName": "Turner",
-        "userName": "mattturner10",
-        "phone": 9452877662,
-        "email": "mattturner@gmail.com",
-        "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-      },
-      "solution": {
-        "solutionSubject": "Operate eye disease.",
-        "investigation": "Diseases on the left eye and abnormal eye development and function.",
-        "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-      },
-      "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-      "createdAt": "2021-03-30T08:30:00Z",
-      "modifiedAt": "2021-04-28T08:30:00Z",
-      "assignedTo": {
-        "firstName": "Katherine",
-        "lastName": "Marshall",
-        "phone": 8452877665,
-        "email": "kathmarshall@hm.io",
-        "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-        "assignedOn": "2021-03-30T08:30:00Z",
-        "profession": "Ophthalmologists"
-      },
-      "milestones": [
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        },
-        {
-          "description": "Home therapy for left eye before surgery.",
-          "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-          "createdAt": "2022-10-21T01:12:23.926Z"
-        }
-      ],
-      "activities": [
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        },
-        {
-          "description": "Uploaded X-Ray report.",
-          "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-          "createdAt": "2022-10-21T01:14:27.516Z"
-        }
-      ]
-    }
-  ]
+  "phone": 8623817665
 }
 ```
 
+
+
+#### IV. Example Response: Internal server error. Can't fulfill the request.
+```js
+{
+  "statusCode": 500,
+  "description": "Internal server error. Can't fulfill the request."
+}
+```
 
 
 ***Status Code:*** 500
@@ -929,28 +270,10 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-***Query params:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 | Page number to paginate. |
-| perPage | 10 | Total items to retrive at once. |
-
-
-
 ***More example Requests/Responses:***
 
 
 #### I. Example Request: Successfully retrieved all the case managers.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 |  |
-| perPage | 10 |  |
 
 
 
@@ -1024,6 +347,18 @@ URL: {{baseUrl}}/casemanagers
             "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
+        ],
+        "notes": [
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          },
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          }
         ]
       },
       {
@@ -1077,6 +412,18 @@ URL: {{baseUrl}}/casemanagers
           {
             "description": "Uploaded X-Ray report.",
             "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          }
+        ],
+        "notes": [
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          },
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
         ]
@@ -1146,6 +493,18 @@ URL: {{baseUrl}}/casemanagers
             "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
+        ],
+        "notes": [
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          },
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          }
         ]
       },
       {
@@ -1201,6 +560,18 @@ URL: {{baseUrl}}/casemanagers
             "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
             "createdAt": "2022-10-21T01:14:27.516Z"
           }
+        ],
+        "notes": [
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          },
+          {
+            "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+            "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+            "createdAt": "2022-10-21T01:14:27.516Z"
+          }
         ]
       }
     ]
@@ -1215,7 +586,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-#### II. Example Request: Bad request.
+#### II. Example Request: Invalid request. Please fill the required input/inputs.
 
 
 
@@ -1230,6 +601,15 @@ URL: {{baseUrl}}/casemanagers
 
 ***Body: None***
 
+
+
+#### II. Example Response: Invalid request. Please fill the required input/inputs.
+```js
+{
+  "statusCode": 400,
+  "description": "Invalid request. Please fill the required input/inputs."
+}
+```
 
 
 ***Status Code:*** 400
@@ -1238,7 +618,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-#### III. Example Request: Not found.
+#### III. Example Request: Bad request. Can't find the requested resource.
 
 
 
@@ -1253,6 +633,15 @@ URL: {{baseUrl}}/casemanagers
 
 ***Body: None***
 
+
+
+#### III. Example Response: Bad request. Can't find the requested resource.
+```js
+{
+  "statusCode": 404,
+  "description": "Bad request. Can't find the requested resource."
+}
+```
 
 
 ***Status Code:*** 404
@@ -1261,7 +650,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-#### IV. Example Request: Internal Server Error. Please try again later.
+#### IV. Example Request: Internal server error. Can't fulfill the request.
 
 
 
@@ -1276,6 +665,15 @@ URL: {{baseUrl}}/casemanagers
 
 ***Body: None***
 
+
+
+#### IV. Example Response: Internal server error. Can't fulfill the request.
+```js
+{
+  "statusCode": 500,
+  "description": "Internal server error. Can't fulfill the request."
+}
+```
 
 
 ***Status Code:*** 500
@@ -1382,6 +780,18 @@ URL: {{baseUrl}}/cases
       "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
       "createdAt": "2022-10-21T01:14:27.516Z"
     }
+  ],
+  "notes": [
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    }
   ]
 }
 ```
@@ -1451,6 +861,18 @@ URL: {{baseUrl}}/cases
       "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
       "createdAt": "2022-10-21T01:14:27.516Z"
     }
+  ],
+  "notes": [
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    }
   ]
 }
 ```
@@ -1479,40 +901,7 @@ URL: {{baseUrl}}/cases
   },
   "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
   "createdAt": "2021-03-30T08:30:00Z",
-  "modifiedAt": "2021-04-28T08:30:00Z",
-  "assignedTo": {
-    "firstName": "Katherine",
-    "lastName": "Marshall",
-    "phone": 8452877665,
-    "email": "kathmarshall@hm.io",
-    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-    "assignedOn": "2021-03-30T08:30:00Z",
-    "profession": "Ophthalmologists"
-  },
-  "milestones": [
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    },
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    }
-  ],
-  "activities": [
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ]
+  "modifiedAt": "2021-04-28T08:30:00Z"
 }
 ```
 
@@ -1523,7 +912,7 @@ URL: {{baseUrl}}/cases
 
 
 
-#### II. Example Request: Bad request. Required fields are missing.
+#### II. Example Request: Invalid request. Please fill the required input/inputs.
 
 
 
@@ -1583,10 +972,31 @@ URL: {{baseUrl}}/cases
       "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
       "createdAt": "2022-10-21T01:14:27.516Z"
     }
+  ],
+  "notes": [
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    }
   ]
 }
 ```
 
+
+
+#### II. Example Response: Invalid request. Please fill the required input/inputs.
+```js
+{
+  "statusCode": 400,
+  "description": "Invalid request. Please fill the required input/inputs."
+}
+```
 
 
 ***Status Code:*** 400
@@ -1595,7 +1005,7 @@ URL: {{baseUrl}}/cases
 
 
 
-#### III. Example Request: Not found.
+#### III. Example Request: Bad request. Can't find the requested resource.
 
 
 
@@ -1655,10 +1065,31 @@ URL: {{baseUrl}}/cases
       "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
       "createdAt": "2022-10-21T01:14:27.516Z"
     }
+  ],
+  "notes": [
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    }
   ]
 }
 ```
 
+
+
+#### III. Example Response: Bad request. Can't find the requested resource.
+```js
+{
+  "statusCode": 404,
+  "description": "Bad request. Can't find the requested resource."
+}
+```
 
 
 ***Status Code:*** 404
@@ -1667,7 +1098,7 @@ URL: {{baseUrl}}/cases
 
 
 
-#### IV. Example Request: Internal Server Error. Please try again later
+#### IV. Example Request: Internal server error. Can't fulfill the request.
 
 
 
@@ -1727,10 +1158,31 @@ URL: {{baseUrl}}/cases
       "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
       "createdAt": "2022-10-21T01:14:27.516Z"
     }
+  ],
+  "notes": [
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    },
+    {
+      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+      "createdAt": "2022-10-21T01:14:27.516Z"
+    }
   ]
 }
 ```
 
+
+
+#### IV. Example Response: Internal server error. Can't fulfill the request.
+```js
+{
+  "statusCode": 500,
+  "description": "Internal server error. Can't fulfill the request."
+}
+```
 
 
 ***Status Code:*** 500
@@ -1762,28 +1214,10 @@ URL: {{baseUrl}}/cases
 
 
 
-***Query params:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 | Page number to paginate. |
-| perPage | 10 | Total items to retrive at once. |
-
-
-
 ***More example Requests/Responses:***
 
 
 #### I. Example Request: Successfully retrieved all the cases.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 |  |
-| perPage | 10 |  |
 
 
 
@@ -1847,6 +1281,18 @@ URL: {{baseUrl}}/cases
         "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
         "createdAt": "2022-10-21T01:14:27.516Z"
       }
+    ],
+    "notes": [
+      {
+        "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+        "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      },
+      {
+        "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+        "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      }
     ]
   },
   {
@@ -1902,6 +1348,18 @@ URL: {{baseUrl}}/cases
         "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
         "createdAt": "2022-10-21T01:14:27.516Z"
       }
+    ],
+    "notes": [
+      {
+        "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+        "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      },
+      {
+        "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
+        "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
+        "createdAt": "2022-10-21T01:14:27.516Z"
+      }
     ]
   }
 ]
@@ -1914,7 +1372,7 @@ URL: {{baseUrl}}/cases
 
 
 
-#### II. Example Request: Bad request.
+#### II. Example Request: Invalid request. Please fill the required input/inputs.
 
 
 
@@ -1929,6 +1387,15 @@ URL: {{baseUrl}}/cases
 
 ***Body: None***
 
+
+
+#### II. Example Response: Invalid request. Please fill the required input/inputs.
+```js
+{
+  "statusCode": 400,
+  "description": "Invalid request. Please fill the required input/inputs."
+}
+```
 
 
 ***Status Code:*** 400
@@ -1937,7 +1404,7 @@ URL: {{baseUrl}}/cases
 
 
 
-#### III. Example Request: Not found.
+#### III. Example Request: Bad request. Can't find the requested resource.
 
 
 
@@ -1952,6 +1419,15 @@ URL: {{baseUrl}}/cases
 
 ***Body: None***
 
+
+
+#### III. Example Response: Bad request. Can't find the requested resource.
+```js
+{
+  "statusCode": 404,
+  "description": "Bad request. Can't find the requested resource."
+}
+```
 
 
 ***Status Code:*** 404
@@ -1960,7 +1436,7 @@ URL: {{baseUrl}}/cases
 
 
 
-#### IV. Example Request: Internal Server Error. Please try again later.
+#### IV. Example Request: Internal server error. Can't fulfill the request.
 
 
 
@@ -1975,6 +1451,15 @@ URL: {{baseUrl}}/cases
 
 ***Body: None***
 
+
+
+#### IV. Example Response: Internal server error. Can't fulfill the request.
+```js
+{
+  "statusCode": 500,
+  "description": "Internal server error. Can't fulfill the request."
+}
+```
 
 
 ***Status Code:*** 500
@@ -1984,6 +1469,6 @@ URL: {{baseUrl}}/cases
 
 
 ---
-[Back to top](#case-manager-api-collection)
+[Back to top](#case-manager-case-case-note-api-documentation)
 
->Generated at 2022-10-24 18:22:51 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2022-10-27 15:48:18 by [docgen](https://github.com/thedevsaddam/docgen)
