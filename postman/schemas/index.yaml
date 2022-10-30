@@ -131,7 +131,7 @@ paths:
                                 $ref: "#/components/schemas/HttpError500"
 
     /casemanagers/{id}:
-        # @GET /casemanager/{id}
+        # @GET /casemanagers/{id}
         get:
             tags:
                 - case-manager
@@ -146,6 +146,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: "378cdddc-31af-481c-9000-2ab4eabeebaf"
             responses:
                 "200":
                     description: Successfully retrieved case manager.
@@ -172,7 +173,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @PUT /casemanager/{id}
+        # @PUT /casemanagers/{id}
         put:
             tags:
                 - case-manager
@@ -187,6 +188,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 378cdddc-31af-481c-9000-2ab4eabeebaf
 
             requestBody:
                 content:
@@ -222,7 +224,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @DELETE /casemanager/{id}
+        # @DELETE /casemanagers/{id}
         delete:
             tags:
                 - case-manager
@@ -237,6 +239,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 378cdddc-31af-481c-9000-2ab4eabeebaf
             responses:
                 "204":
                     description: Case manager deleted sucessfully.
@@ -375,6 +378,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
             responses:
                 "200":
                     description: Successfully retrieved case.
@@ -416,6 +420,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
 
             requestBody:
                 content:
@@ -466,6 +471,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
             responses:
                 "204":
                     description: Case deleted sucessfully.
@@ -510,6 +516,7 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
 
             requestBody:
                 content:
@@ -525,7 +532,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Note201"
+                                $ref: "#/components/schemas/Note200"
                 "400":
                     description: Invalid request. Please fill the required input/inputs.
                     content:
@@ -560,14 +567,17 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
 
             responses:
-                "201":
-                    description: Added case note sucessfully.
+                "200":
+                    description: Retrieved case notes sucessfully.
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Note201"
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/Note201"
                 "400":
                     description: Invalid request. Please fill the required input/inputs.
                     content:
@@ -587,28 +597,39 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
+    /cases/{id}/notes/{noteId}:
         # @PUT /cases/{id}/notes
         put:
             tags:
                 - case-notes
             summary: Case note.
-            description: Add a case note.
-            operationId: addCaseNote
+            description: Update a case note.
+            operationId: updateCaseNote
             parameters:
                 - name: id
+                  in: path
+                  description: Case related to the note.
+                  required: true
+                  schema:
+                      type: integer
+                      format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
+
+                - name: noteId
                   in: path
                   description: Note to be updated.
                   required: true
                   schema:
                       type: integer
                       format: int64
+                      example: n7a42579-d7c3-45ef-8b5f-8eac996db599
 
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: "#/components/schemas/Note"
-                description: Added case note object with the ID provided.
+                            $ref: "#/components/schemas/Note201"
+                description: Updated case note object with the ID provided.
                 required: true
 
             responses:
@@ -637,7 +658,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @POST /cases/{id}/notes
+        # @POST /cases/{id}/notes/{noteId}
         delete:
             tags:
                 - case-notes
@@ -652,6 +673,16 @@ paths:
                   schema:
                       type: integer
                       format: int64
+                      example: 36005a82-a612-4dc1-9279-7215df6895cd
+
+                - name: noteId
+                  in: path
+                  description: Note to be deleted from the case.
+                  required: true
+                  schema:
+                      type: integer
+                      format: int64
+                      example: n7a42579-d7c3-45ef-8b5f-8eac996db599
 
             responses:
                 "204":
@@ -1009,8 +1040,8 @@ components:
             required:
                 - comment
 
-        # Note201 response schema
-        Note201:
+        # Note200 response schema
+        Note200:
             type: object
             properties:
                 noteId:
@@ -1020,6 +1051,25 @@ components:
                 statusMessage:
                     type: string
                     example: "Successfully added a case note."
+            
+            required:
+                - description
+
+        # Note201 response schema
+        Note201:
+            type: object
+            properties:
+                caseId:
+                    type: string
+                    format: int64
+                    example: "36005a82-a612-4dc1-9279-7215df6895cd"
+                noteId:
+                    type: string
+                    format: int64
+                    example: "n7a42579-d7c3-45ef-8b5f-8eac996db599"
+                statusMessage:
+                    type: string
+                    example: "Successfully updated a case note."
             
             required:
                 - description
