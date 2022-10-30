@@ -1,11 +1,11 @@
 
-# Case Manager, Case, Case Note API Documentation
+# Case Manager API Documentation
 
 The API retrieves information about case managers and their cases.
 
 Contact Support:
- - **Name:** Sintu Boro
- - **Email:** sb394@njit.edu
+ - Name: Sintu Boro
+ - Email: sb394@njit.edu
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
 
@@ -14,8 +14,7 @@ Contact Support:
 
 | Key | Value | Type |
 | --- | ------|-------------|
-| baseUrl (dev) | http://localhost:3000 | string |
-| baseUrl (mock) | https://738ba7ae-62b5-49c6-a114-bf44e57d6b0b.mock.pstmn.io | string |
+| baseUrl | http://localhost:3000 | string |
 
 
 
@@ -270,10 +269,28 @@ URL: {{baseUrl}}/casemanagers
 
 
 
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| page | 1 | Page number to paginate. |
+| perPage | 10 | Total items to retrive at once. |
+
+
+
 ***More example Requests/Responses:***
 
 
 #### I. Example Request: Successfully retrieved all the case managers.
+
+
+
+***Query:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -1214,10 +1231,28 @@ URL: {{baseUrl}}/cases
 
 
 
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| page | 1 | Page number to paginate. |
+| perPage | 10 | Total items to retrive at once. |
+
+
+
 ***More example Requests/Responses:***
 
 
 #### I. Example Request: Successfully retrieved all the cases.
+
+
+
+***Query:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| page | 1 |  |
+| perPage | 10 |  |
 
 
 
@@ -1469,6 +1504,6 @@ URL: {{baseUrl}}/cases
 
 
 ---
-[Back to top](#case-manager-case-case-note-api-documentation)
+[Back to top](#case-manager-api-documentation)
 
->Generated at 2022-10-27 15:48:18 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2022-10-30 18:24:48 by [docgen](https://github.com/thedevsaddam/docgen)
