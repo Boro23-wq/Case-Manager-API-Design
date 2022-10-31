@@ -5,7 +5,7 @@ id = 92d00750-1af3-49d8-9bb0-5b5fb9213fd3
 
 [relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"23943499-2768b980-d888-417a-a78e-800b3271a82c","path":"Case Manager API Documentation.json","metaData":{}}
+files[] = {"id":"23943499-d5a1fbd0-a72f-4052-8ef8-737820d31118","path":"Case Managers API Collection.json","metaData":{}}
 
 [relations.collections.metaData]
 

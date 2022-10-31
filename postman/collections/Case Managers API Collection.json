@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2768b980-d888-417a-a78e-800b3271a82c",
-		"name": "Case Manager API Documentation",
+		"_postman_id": "d5a1fbd0-a72f-4052-8ef8-737820d31118",
+		"name": "Case Managers API Collection",
 		"description": "The API retrieves information about case managers and their cases.\n\nContact Support:\n Name: Sintu Boro\n Email: sb394@njit.edu",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "23943499-2768b980-d888-417a-a78e-800b3271a82c"
+		"_uid": "23943499-d5a1fbd0-a72f-4052-8ef8-737820d31118"
 	},
 	"item": [
 		{
@@ -15,7 +15,7 @@
 					"item": [
 						{
 							"name": "Find case manager by ID.",
-							"id": "17617196-abf3-4cee-9045-c73914e8341c",
+							"id": "abf8ab98-2bed-4a6e-866d-09199a352819",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -39,7 +39,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "61992927",
+											"value": "66755779",
 											"description": "(Required) ID of case manager to be returned."
 										}
 									]
@@ -48,7 +48,7 @@
 							},
 							"response": [
 								{
-									"id": "ef230d17-24a7-4b91-9eca-a442fa73786b",
+									"id": "8358aede-3d9f-42bb-8191-b84c972fe6dd",
 									"name": "Successfully retrieved case manager.",
 									"originalRequest": {
 										"method": "GET",
@@ -65,7 +65,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of case manager to be returned."
 												}
 											]
@@ -84,7 +84,7 @@
 									"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
 								},
 								{
-									"id": "6da50b9b-5c6d-4fe5-b0ed-9c9e7aa45557",
+									"id": "e20fae0e-ee85-4cfb-a9ec-c58c5308a055",
 									"name": "Invalid request. Please fill the required input/inputs.",
 									"originalRequest": {
 										"method": "GET",
@@ -101,7 +101,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of case manager to be returned."
 												}
 											]
@@ -120,7 +120,7 @@
 									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 								},
 								{
-									"id": "66af6794-bdad-4344-8b68-e330973430a3",
+									"id": "91d93453-d7c2-4af7-a40a-61e7ad93b05a",
 									"name": "Bad request. Can't find the requested resource.",
 									"originalRequest": {
 										"method": "GET",
@@ -137,7 +137,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of case manager to be returned."
 												}
 											]
@@ -156,7 +156,7 @@
 									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 								},
 								{
-									"id": "c81b684d-c152-498a-9720-1f0bf9d394d4",
+									"id": "82321ab2-2dc8-4cf2-90a4-de37a6542734",
 									"name": "Internal server error. Can't fulfill the request.",
 									"originalRequest": {
 										"method": "GET",
@@ -173,7 +173,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of case manager to be returned."
 												}
 											]
@@ -195,7 +195,7 @@
 						},
 						{
 							"name": "Update a case manager.",
-							"id": "f8079d35-5169-4188-8eda-b75e8093467d",
+							"id": "834cefcb-4c8a-4e00-9afd-be12ec1d5496",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -232,7 +232,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "61992927",
+											"value": "66755779",
 											"description": "(Required) ID of the case manager to be updated."
 										}
 									]
@@ -241,7 +241,7 @@
 							},
 							"response": [
 								{
-									"id": "93659665-3dc4-4004-baf8-43192970f1af",
+									"id": "21e7f73a-4459-465a-92b3-bee430aac84f",
 									"name": "Successfully updated case manager with the provided ID.",
 									"originalRequest": {
 										"method": "PUT",
@@ -267,7 +267,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be updated."
 												}
 											]
@@ -286,7 +286,7 @@
 									"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n  \"cases\": [\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    },\n    {\n      \"status\": \"Active\",\n      \"category\": \"Eye\",\n      \"severity\": \"0-Critical Impact\",\n      \"subject\": \"Operation follow-up\",\n      \"patientDetail\": {\n        \"firstName\": \"Matt\",\n        \"lastName\": \"Turner\",\n        \"userName\": \"mattturner10\",\n        \"phone\": 9452877662,\n        \"email\": \"mattturner@gmail.com\",\n        \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n      },\n      \"solution\": {\n        \"solutionSubject\": \"Operate eye disease.\",\n        \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n        \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n      },\n      \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n      \"createdAt\": \"2021-03-30T08:30:00Z\",\n      \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n      \"assignedTo\": {\n        \"firstName\": \"Katherine\",\n        \"lastName\": \"Marshall\",\n        \"phone\": 8452877665,\n        \"email\": \"kathmarshall@hm.io\",\n        \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n        \"assignedOn\": \"2021-03-30T08:30:00Z\",\n        \"profession\": \"Ophthalmologists\"\n      },\n      \"milestones\": [\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        },\n        {\n          \"description\": \"Home therapy for left eye before surgery.\",\n          \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n          \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n        }\n      ],\n      \"activities\": [\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"description\": \"Uploaded X-Ray report.\",\n          \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ],\n      \"notes\": [\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        },\n        {\n          \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n          \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n          \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n        }\n      ]\n    }\n  ]\n}"
 								},
 								{
-									"id": "d20877ce-0024-4e1e-9788-8788f27848b4",
+									"id": "647e355e-a300-4ef5-918d-c4a3d6ed477f",
 									"name": "Invalid request. Please fill the required input/inputs.",
 									"originalRequest": {
 										"method": "PUT",
@@ -312,7 +312,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be updated."
 												}
 											]
@@ -331,7 +331,7 @@
 									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 								},
 								{
-									"id": "6b6edd97-e014-408c-9f4a-13b0755d7293",
+									"id": "b954c241-861c-480e-9153-ef71ee05dce5",
 									"name": "Bad request. Can't find the requested resource.",
 									"originalRequest": {
 										"method": "PUT",
@@ -357,7 +357,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be updated."
 												}
 											]
@@ -376,7 +376,7 @@
 									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 								},
 								{
-									"id": "59e7a4eb-d446-40b7-a33e-d176601143bf",
+									"id": "e3a4f6e8-b1a3-44e1-ace3-e25b967e5830",
 									"name": "Internal server error. Can't fulfill the request.",
 									"originalRequest": {
 										"method": "PUT",
@@ -402,7 +402,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be updated."
 												}
 											]
@@ -424,7 +424,7 @@
 						},
 						{
 							"name": "Delete a case manager.",
-							"id": "2e3d238e-d7bc-41ae-9ded-ff0deb0d62b4",
+							"id": "bdefef4c-8eb8-4059-907b-a35e97e6d1cf",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -448,7 +448,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "61992927",
+											"value": "66755779",
 											"description": "(Required) ID of the case manager to be deleted."
 										}
 									]
@@ -457,7 +457,7 @@
 							},
 							"response": [
 								{
-									"id": "cfdc1f0e-6ffc-49da-89ee-bf0ab42bbd2f",
+									"id": "a3b76c7d-2fba-4381-9b02-b2b96c97006f",
 									"name": "Case manager deleted sucessfully.",
 									"originalRequest": {
 										"method": "DELETE",
@@ -474,14 +474,14 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be deleted."
 												}
 											]
 										}
 									},
-									"status": "No Content",
-									"code": 204,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "json",
 									"header": [
 										{
@@ -493,7 +493,7 @@
 									"body": "\"290cdddc-31af-481c-9000-2ab4eabeebaf\""
 								},
 								{
-									"id": "2a1ab752-6b19-4394-94be-ed074a6ec11b",
+									"id": "289bea37-718a-4f80-a962-f4e61d1e7092",
 									"name": "Invalid request. Please fill the required input/inputs.",
 									"originalRequest": {
 										"method": "DELETE",
@@ -510,7 +510,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be deleted."
 												}
 											]
@@ -529,7 +529,7 @@
 									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 								},
 								{
-									"id": "0eddeba5-ae14-4cac-ac47-4b6f5dcee6e3",
+									"id": "42c4bdc6-a9a1-48f1-badc-dd995ccc3dd8",
 									"name": "Bad request. Can't find the requested resource.",
 									"originalRequest": {
 										"method": "DELETE",
@@ -546,7 +546,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be deleted."
 												}
 											]
@@ -565,7 +565,7 @@
 									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 								},
 								{
-									"id": "060f5566-e830-48ee-ac65-5c1669172117",
+									"id": "4ed77813-9add-4716-9dad-b0bdebfc0d9f",
 									"name": "Internal server error. Can't fulfill the request.",
 									"originalRequest": {
 										"method": "DELETE",
@@ -582,7 +582,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "61992927",
+													"value": "66755779",
 													"description": "(Required) ID of the case manager to be deleted."
 												}
 											]
@@ -603,11 +603,11 @@
 							]
 						}
 					],
-					"id": "5c0e5f15-611c-471f-9c56-ad954bc3dd02"
+					"id": "15b006cc-a89f-4657-a3b4-7d2ef35f42fe"
 				},
 				{
 					"name": "Create a case manager.",
-					"id": "bb66d536-b886-4aa6-8059-07dfcaecc726",
+					"id": "609952d4-910f-4950-a4c3-5e1b7cd28a12",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -645,7 +645,7 @@
 					},
 					"response": [
 						{
-							"id": "541137f2-d94a-4535-a0b5-e9e02b09f16d",
+							"id": "4012b8a4-27d3-4fb0-ba72-a0eaef89dd52",
 							"name": "Successfully created case manager.",
 							"originalRequest": {
 								"method": "POST",
@@ -682,7 +682,7 @@
 							"body": "{\n  \"username\": \"johndoe\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"johndoe@cm.io\",\n  \"phone\": 8623817665,\n  \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n  \"createdAt\": \"2021-01-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-01-31T08:30:00Z\"\n}"
 						},
 						{
-							"id": "6c6d2fe0-9e6d-40c2-ba52-79059fbfce43",
+							"id": "fa4afd53-1623-4679-bf58-3e4b4b839e8a",
 							"name": "Invalid request. Please fill the required input/inputs.",
 							"originalRequest": {
 								"method": "POST",
@@ -719,7 +719,7 @@
 							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 						},
 						{
-							"id": "fd5a15bf-32e7-424e-8dab-2c1d57bb3701",
+							"id": "d893677d-52dd-4129-85ca-7937cf3a75c6",
 							"name": "Bad request. Can't find the requested resource.",
 							"originalRequest": {
 								"method": "POST",
@@ -756,7 +756,7 @@
 							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 						},
 						{
-							"id": "efe2f006-1461-4414-b9b7-98384f27493a",
+							"id": "b2e30360-d231-4c4f-a90f-848fad036244",
 							"name": "Internal server error. Can't fulfill the request.",
 							"originalRequest": {
 								"method": "POST",
@@ -796,7 +796,7 @@
 				},
 				{
 					"name": "Find all case managers.",
-					"id": "74c15d55-89f1-458b-b115-ec638bcaa5a4",
+					"id": "14f03f65-5d08-440f-9210-6cc4e6c70571",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -833,7 +833,7 @@
 					},
 					"response": [
 						{
-							"id": "dba2b2db-e490-4d5c-859c-31138ebe60c3",
+							"id": "a2f12e50-7ae4-48c8-99c3-137689c82299",
 							"name": "Successfully retrieved all the case managers.",
 							"originalRequest": {
 								"method": "GET",
@@ -871,7 +871,7 @@
 							"body": "[\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      },\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"username\": \"johndoe\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@cm.io\",\n    \"phone\": 8623817665,\n    \"caseManagerId\": \"378cdddc-31af-481c-9000-2ab4eabeebaf\",\n    \"createdAt\": \"2021-01-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-01-31T08:30:00Z\",\n    \"cases\": [\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      },\n      {\n        \"status\": \"Active\",\n        \"category\": \"Eye\",\n        \"severity\": \"0-Critical Impact\",\n        \"subject\": \"Operation follow-up\",\n        \"patientDetail\": {\n          \"firstName\": \"Matt\",\n          \"lastName\": \"Turner\",\n          \"userName\": \"mattturner10\",\n          \"phone\": 9452877662,\n          \"email\": \"mattturner@gmail.com\",\n          \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n        },\n        \"solution\": {\n          \"solutionSubject\": \"Operate eye disease.\",\n          \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n          \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n        },\n        \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n        \"createdAt\": \"2021-03-30T08:30:00Z\",\n        \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n        \"assignedTo\": {\n          \"firstName\": \"Katherine\",\n          \"lastName\": \"Marshall\",\n          \"phone\": 8452877665,\n          \"email\": \"kathmarshall@hm.io\",\n          \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n          \"assignedOn\": \"2021-03-30T08:30:00Z\",\n          \"profession\": \"Ophthalmologists\"\n        },\n        \"milestones\": [\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          },\n          {\n            \"description\": \"Home therapy for left eye before surgery.\",\n            \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n            \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n          }\n        ],\n        \"activities\": [\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"description\": \"Uploaded X-Ray report.\",\n            \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ],\n        \"notes\": [\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          },\n          {\n            \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n            \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n            \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n          }\n        ]\n      }\n    ]\n  }\n]"
 						},
 						{
-							"id": "e4fd8f2c-9240-40c4-ba54-85455a8c5eb0",
+							"id": "9714d62c-3e01-469e-88b1-8c60f1b12e2c",
 							"name": "Invalid request. Please fill the required input/inputs.",
 							"originalRequest": {
 								"method": "GET",
@@ -909,7 +909,7 @@
 							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 						},
 						{
-							"id": "5332c14b-183d-4c8f-93ca-edfcb6a0d41c",
+							"id": "325234fa-ea3f-4897-88a0-f82fed13d802",
 							"name": "Bad request. Can't find the requested resource.",
 							"originalRequest": {
 								"method": "GET",
@@ -947,7 +947,7 @@
 							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 						},
 						{
-							"id": "c67b85f7-36eb-42fd-bb45-40f0b804557a",
+							"id": "d0fdc7a5-b1b9-41cf-b64e-cd1ddf8a0c69",
 							"name": "Internal server error. Can't fulfill the request.",
 							"originalRequest": {
 								"method": "GET",
@@ -987,13 +987,13 @@
 					]
 				}
 			],
-			"id": "7fefbf03-1149-4c35-b1bd-a06210da81fb"
+			"id": "4d4b235b-861f-49e9-868e-f04da55c95e9"
 		},
 		{
 			"name": "cases",
 			"item": [
 				{
-					"name": "{id}",
+					"name": "{caseId}",
 					"item": [
 						{
 							"name": "notes",
@@ -1003,7 +1003,7 @@
 									"item": [
 										{
 											"name": "Case note.",
-											"id": "5b333df1-7482-4c3b-83e3-e0f24740539e",
+											"id": "7620975f-a971-493f-aabc-1f57cc835115",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1029,25 +1029,25 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+													"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes",
 														":noteId"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Case related to the note."
 														},
 														{
 															"key": "noteId",
-															"value": "-88633299",
+															"value": "-29070959",
 															"description": "(Required) Note to be updated."
 														}
 													]
@@ -1056,7 +1056,7 @@
 											},
 											"response": [
 												{
-													"id": "8c9fa371-432e-4b11-a0e1-fd4665ac7068",
+													"id": "c0affc43-2d2e-4de5-b3a4-da4305977ace",
 													"name": "Updated case note sucessfully.",
 													"originalRequest": {
 														"method": "PUT",
@@ -1071,25 +1071,25 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Case related to the note."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be updated."
 																}
 															]
@@ -1108,7 +1108,7 @@
 													"body": "{\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"statusMessage\": \"Successfully updated a case note.\"\n}"
 												},
 												{
-													"id": "9169e2d0-4609-4042-99ba-ac7d51ecf6e6",
+													"id": "364a9dfe-9027-4951-9579-33ef95480fb1",
 													"name": "Invalid request. Please fill the required input/inputs.",
 													"originalRequest": {
 														"method": "PUT",
@@ -1123,25 +1123,25 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Case related to the note."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be updated."
 																}
 															]
@@ -1160,7 +1160,7 @@
 													"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 												},
 												{
-													"id": "badf5395-18d0-4a4d-8245-aa5592c7d69d",
+													"id": "a5150db6-2094-4432-a284-39b5f1b0597b",
 													"name": "Bad request. Can't find the requested resource.",
 													"originalRequest": {
 														"method": "PUT",
@@ -1175,25 +1175,25 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Case related to the note."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be updated."
 																}
 															]
@@ -1212,7 +1212,7 @@
 													"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 												},
 												{
-													"id": "2d2a3d7b-d266-4666-ad42-7a782942de15",
+													"id": "60c77b32-9583-4888-a25d-53007cbad474",
 													"name": "Internal server error. Can't fulfill the request.",
 													"originalRequest": {
 														"method": "PUT",
@@ -1227,25 +1227,25 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Case related to the note."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be updated."
 																}
 															]
@@ -1267,7 +1267,7 @@
 										},
 										{
 											"name": "Case note.",
-											"id": "268d5386-e65a-4695-9e54-d4210bdb72c1",
+											"id": "d7f65893-ebab-4106-b205-206edeacff71",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -1280,25 +1280,25 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+													"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes",
 														":noteId"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note to be deleted from the case."
 														},
 														{
 															"key": "noteId",
-															"value": "-88633299",
+															"value": "-29070959",
 															"description": "(Required) Note to be deleted from the case."
 														}
 													]
@@ -1307,38 +1307,38 @@
 											},
 											"response": [
 												{
-													"id": "dc5ab155-da4c-436f-9884-3cf01d1f3563",
+													"id": "c895f27b-fc8f-46ea-94fe-8896a9ff8ce5",
 													"name": "Note deleted sucessfully.",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Note to be deleted from the case."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be deleted from the case."
 																}
 															]
 														}
 													},
-													"status": "No Content",
-													"code": 204,
+													"status": "OK",
+													"code": 200,
 													"_postman_previewlanguage": "json",
 													"header": [
 														{
@@ -1350,31 +1350,31 @@
 													"body": "\"nf0cdddc-31af-481c-9000-2ab4eabeebaf\""
 												},
 												{
-													"id": "31786303-b9e3-4f4d-9b5b-df06c1276df4",
+													"id": "66eb6d65-b09a-4874-a58a-ec398e299cc4",
 													"name": "Invalid request. Please fill the required input/inputs.",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Note to be deleted from the case."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be deleted from the case."
 																}
 															]
@@ -1393,31 +1393,31 @@
 													"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 												},
 												{
-													"id": "41543c95-0b70-4280-89a4-e08c9678af30",
+													"id": "f65ab161-ac55-45c3-801c-73d43c56bd27",
 													"name": "Bad request. Can't find the requested resource.",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Note to be deleted from the case."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be deleted from the case."
 																}
 															]
@@ -1436,31 +1436,31 @@
 													"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 												},
 												{
-													"id": "6c59d58c-3b57-43e5-b866-8c8c9e07097e",
+													"id": "0e67e83e-7ab9-4774-b32a-c3764fdcfeeb",
 													"name": "Internal server error. Can't fulfill the request.",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/cases/:id/notes/:noteId",
+															"raw": "{{baseUrl}}/cases/:caseId/notes/:noteId",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
 																"cases",
-																":id",
+																":caseId",
 																"notes",
 																":noteId"
 															],
 															"variable": [
 																{
-																	"key": "id",
-																	"value": "-27044100",
+																	"key": "caseId",
+																	"value": "35608540",
 																	"description": "(Required) Note to be deleted from the case."
 																},
 																{
 																	"key": "noteId",
-																	"value": "-88633299",
+																	"value": "-29070959",
 																	"description": "(Required) Note to be deleted from the case."
 																}
 															]
@@ -1481,11 +1481,11 @@
 											]
 										}
 									],
-									"id": "4e96f18b-ac38-4359-853a-9a1544af387b"
+									"id": "274c5847-b35d-4e0c-88f1-fa0984cb4d5a"
 								},
 								{
 									"name": "Case note.",
-									"id": "ccea1783-5e48-4aa0-82fe-0043f5ad12ee",
+									"id": "6d2d6d59-a567-42b5-8bb5-4b9d54b18c27",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1511,19 +1511,19 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id/notes",
+											"raw": "{{baseUrl}}/cases/:caseId/notes",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id",
+												":caseId",
 												"notes"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) Note to be added to the case."
 												}
 											]
@@ -1532,7 +1532,7 @@
 									},
 									"response": [
 										{
-											"id": "e53a5524-dbbe-4194-b1f4-518390f92960",
+											"id": "cc8f0200-dc73-4323-a3c6-577362cad2a7",
 											"name": "Added case note sucessfully.",
 											"originalRequest": {
 												"method": "POST",
@@ -1547,19 +1547,19 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note to be added to the case."
 														}
 													]
@@ -1578,7 +1578,7 @@
 											"body": "{\n  \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n  \"statusMessage\": \"Successfully added a case note.\"\n}"
 										},
 										{
-											"id": "268e0883-916e-450f-b08f-b75808da94ed",
+											"id": "6285e845-2dd2-41d6-a071-bf17a0389d87",
 											"name": "Invalid request. Please fill the required input/inputs.",
 											"originalRequest": {
 												"method": "POST",
@@ -1593,19 +1593,19 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note to be added to the case."
 														}
 													]
@@ -1624,7 +1624,7 @@
 											"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 										},
 										{
-											"id": "761971f8-87c3-4fd2-8bed-2f389ce50893",
+											"id": "e6cfc75d-8715-4403-b746-41124fd200e9",
 											"name": "Bad request. Can't find the requested resource.",
 											"originalRequest": {
 												"method": "POST",
@@ -1639,19 +1639,19 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note to be added to the case."
 														}
 													]
@@ -1670,7 +1670,7 @@
 											"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 										},
 										{
-											"id": "4ca84a1f-8d6a-4ccd-ab4e-ae4ff1ee9dc1",
+											"id": "8d632e32-4c96-4bb6-8269-af64223f7ca3",
 											"name": "Internal server error. Can't fulfill the request.",
 											"originalRequest": {
 												"method": "POST",
@@ -1685,19 +1685,19 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note to be added to the case."
 														}
 													]
@@ -1719,7 +1719,7 @@
 								},
 								{
 									"name": "Case note.",
-									"id": "eac9193d-40d0-466c-acbf-cf7347cdabc9",
+									"id": "b036097c-75b9-4aca-8fe4-1761b66cf5bc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1732,19 +1732,19 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id/notes",
+											"raw": "{{baseUrl}}/cases/:caseId/notes",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id",
+												":caseId",
 												"notes"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) Note id to be retrieved."
 												}
 											]
@@ -1753,25 +1753,25 @@
 									},
 									"response": [
 										{
-											"id": "723ddb4c-25f3-4505-a42e-b841e0ddf15f",
+											"id": "09f0e437-2fb8-4135-89cc-b9e6dffef234",
 											"name": "Retrieved case notes sucessfully.",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note id to be retrieved."
 														}
 													]
@@ -1790,25 +1790,25 @@
 											"body": "[\n  {\n    \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n    \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n    \"statusMessage\": \"Successfully updated a case note.\"\n  },\n  {\n    \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n    \"noteId\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n    \"statusMessage\": \"Successfully updated a case note.\"\n  }\n]"
 										},
 										{
-											"id": "84f36220-324b-478e-94e0-6ee9e9efb05b",
+											"id": "7d3a6d54-9e80-47e2-a47a-d859064bdba1",
 											"name": "Invalid request. Please fill the required input/inputs.",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note id to be retrieved."
 														}
 													]
@@ -1827,25 +1827,25 @@
 											"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 										},
 										{
-											"id": "d93c2991-28dc-476a-9d27-4734774c46a5",
+											"id": "d8c083ca-f7bd-4ac3-b3a2-5c578760e7e6",
 											"name": "Bad request. Can't find the requested resource.",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note id to be retrieved."
 														}
 													]
@@ -1864,25 +1864,25 @@
 											"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 										},
 										{
-											"id": "8d23646e-e11a-4049-8068-8e98813e0b6a",
+											"id": "347f7e2d-26b3-4ce3-97c3-6dab6bc85c97",
 											"name": "Internal server error. Can't fulfill the request.",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/cases/:id/notes",
+													"raw": "{{baseUrl}}/cases/:caseId/notes",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"cases",
-														":id",
+														":caseId",
 														"notes"
 													],
 													"variable": [
 														{
-															"key": "id",
-															"value": "-27044100",
+															"key": "caseId",
+															"value": "35608540",
 															"description": "(Required) Note id to be retrieved."
 														}
 													]
@@ -1903,11 +1903,11 @@
 									]
 								}
 							],
-							"id": "f59a4628-493e-499f-9656-2ecdee309ed7"
+							"id": "acb59495-1b98-4779-9123-c9b8dc47cd6d"
 						},
 						{
 							"name": "Find case by ID.",
-							"id": "c0a8bf72-a2b0-407a-8393-bfa34e420f79",
+							"id": "cd7589ce-20ab-4c7e-937d-e37a9968076b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1920,18 +1920,18 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/cases/:id",
+									"raw": "{{baseUrl}}/cases/:caseId",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"cases",
-										":id"
+										":caseId"
 									],
 									"variable": [
 										{
-											"key": "id",
-											"value": "-27044100",
+											"key": "caseId",
+											"value": "35608540",
 											"description": "(Required) ID of the case to be returned."
 										}
 									]
@@ -1940,24 +1940,24 @@
 							},
 							"response": [
 								{
-									"id": "a1e4100f-821c-49d3-a7a5-da62c88a71d7",
+									"id": "6d8daa20-8f7f-4238-a5eb-85952925c05c",
 									"name": "Successfully retrieved case.",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be returned."
 												}
 											]
@@ -1976,24 +1976,24 @@
 									"body": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}"
 								},
 								{
-									"id": "bdf75e0f-1e34-4f1d-af35-a709d45f4861",
+									"id": "060b0f11-ae4c-4d0d-805c-bb24b536a8f6",
 									"name": "Invalid request. Please fill the required input/inputs.",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be returned."
 												}
 											]
@@ -2012,24 +2012,24 @@
 									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 								},
 								{
-									"id": "3bc31639-affa-465e-8b0b-d558ca2a1ce5",
+									"id": "ca88c478-bdb0-4cf9-8302-40bbe306fcfc",
 									"name": "Bad request. Can't find the requested resource.",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be returned."
 												}
 											]
@@ -2048,24 +2048,24 @@
 									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 								},
 								{
-									"id": "d81bb53b-b093-4e98-97ef-0399796bbd3e",
+									"id": "5d31f7cb-b8cd-4b68-8cb4-f4cfaf297099",
 									"name": "Internal server error. Can't fulfill the request.",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be returned."
 												}
 											]
@@ -2087,7 +2087,7 @@
 						},
 						{
 							"name": "Update a case.",
-							"id": "edadd7ac-5210-4ae7-b9ea-2e3558779edd",
+							"id": "ff46da26-10a6-4214-b6de-60685dab9963",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2113,18 +2113,18 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/cases/:id",
+									"raw": "{{baseUrl}}/cases/:caseId",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"cases",
-										":id"
+										":caseId"
 									],
 									"variable": [
 										{
-											"key": "id",
-											"value": "-27044100",
+											"key": "caseId",
+											"value": "35608540",
 											"description": "(Required) ID of the case to be updated."
 										}
 									]
@@ -2133,7 +2133,7 @@
 							},
 							"response": [
 								{
-									"id": "ff251eac-9663-485f-9424-dde5575ad055",
+									"id": "f26d040f-b744-42ea-a8d4-343b623baf77",
 									"name": "Successfully updated case with the provided ID.",
 									"originalRequest": {
 										"method": "PUT",
@@ -2148,18 +2148,18 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be updated."
 												}
 											]
@@ -2178,7 +2178,7 @@
 									"body": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n  \"assignedTo\": {\n    \"firstName\": \"Katherine\",\n    \"lastName\": \"Marshall\",\n    \"phone\": 8452877665,\n    \"email\": \"kathmarshall@hm.io\",\n    \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n    \"assignedOn\": \"2021-03-30T08:30:00Z\",\n    \"profession\": \"Ophthalmologists\"\n  },\n  \"milestones\": [\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    },\n    {\n      \"description\": \"Home therapy for left eye before surgery.\",\n      \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n      \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"description\": \"Uploaded X-Ray report.\",\n      \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ],\n  \"notes\": [\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    },\n    {\n      \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n      \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n      \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n    }\n  ]\n}"
 								},
 								{
-									"id": "e68a28f8-31ba-4adb-bd0e-509aa1f79cc2",
+									"id": "a96466d6-cfc4-4b70-a952-e74f2507d24c",
 									"name": "Invalid request. Please fill the required input/inputs.",
 									"originalRequest": {
 										"method": "PUT",
@@ -2193,18 +2193,18 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be updated."
 												}
 											]
@@ -2223,7 +2223,7 @@
 									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 								},
 								{
-									"id": "621e87b1-2ba1-483e-836b-137d6beedff0",
+									"id": "db0707e9-0d5c-4b0f-a3e5-f367db4d9498",
 									"name": "Bad request. Can't find the requested resource.",
 									"originalRequest": {
 										"method": "PUT",
@@ -2238,18 +2238,18 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be updated."
 												}
 											]
@@ -2268,7 +2268,7 @@
 									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 								},
 								{
-									"id": "8a93361d-23c6-477f-b776-05fc08c1afc0",
+									"id": "632d93fd-9416-426c-b0e0-3f4f0b18093e",
 									"name": "Internal server error. Can't fulfill the request.",
 									"originalRequest": {
 										"method": "PUT",
@@ -2283,18 +2283,18 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be updated."
 												}
 											]
@@ -2316,7 +2316,7 @@
 						},
 						{
 							"name": "Delete a case.",
-							"id": "77590e94-3e52-49ce-8241-6998aedb33da",
+							"id": "42d9f5d7-881e-441c-8f0c-deff94c0435a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2329,18 +2329,18 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/cases/:id",
+									"raw": "{{baseUrl}}/cases/:caseId",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"cases",
-										":id"
+										":caseId"
 									],
 									"variable": [
 										{
-											"key": "id",
-											"value": "-27044100",
+											"key": "caseId",
+											"value": "35608540",
 											"description": "(Required) ID of the case to be deleted."
 										}
 									]
@@ -2349,31 +2349,31 @@
 							},
 							"response": [
 								{
-									"id": "af3d2c30-c645-4273-b948-1046ee6abf1c",
+									"id": "991d96ed-4bc6-4bc8-ba84-c6f0a3ce4e3b",
 									"name": "Case deleted sucessfully.",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be deleted."
 												}
 											]
 										}
 									},
-									"status": "No Content",
-									"code": 204,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "json",
 									"header": [
 										{
@@ -2385,24 +2385,24 @@
 									"body": "\"290cdddc-31af-481c-9000-2ab4eabeebaf\""
 								},
 								{
-									"id": "4a5417c5-3a2c-4dff-bf3b-b1feba9c4f4f",
+									"id": "3efd78e7-c58a-42ea-8cf1-8565d7d93250",
 									"name": "Invalid request. Please fill the required input/inputs.",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be deleted."
 												}
 											]
@@ -2421,24 +2421,24 @@
 									"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 								},
 								{
-									"id": "b2f3df53-f9ba-40df-9454-f532eb6343eb",
+									"id": "27c13ad4-3e54-4b67-a3fb-bf23bd2d101c",
 									"name": "Bad request. Can't find the requested resource.",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be deleted."
 												}
 											]
@@ -2457,24 +2457,24 @@
 									"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 								},
 								{
-									"id": "d0a95b8b-73b2-476f-8af7-578dda927aef",
+									"id": "db2d6b14-1ea1-4f63-92b6-f092d1099965",
 									"name": "Internal server error. Can't fulfill the request.",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/cases/:id",
+											"raw": "{{baseUrl}}/cases/:caseId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"cases",
-												":id"
+												":caseId"
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "-27044100",
+													"key": "caseId",
+													"value": "35608540",
 													"description": "(Required) ID of the case to be deleted."
 												}
 											]
@@ -2495,11 +2495,11 @@
 							]
 						}
 					],
-					"id": "ee9e59a1-9836-4687-ade3-d1f26590f1d0"
+					"id": "9dbe7137-de3b-49fd-b902-403c6d9f2ffc"
 				},
 				{
 					"name": "Create a case.",
-					"id": "da30a613-7e32-4a3e-98aa-42f24af84765",
+					"id": "58c515e0-f555-43cc-9652-64c68d2c0d68",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2537,7 +2537,7 @@
 					},
 					"response": [
 						{
-							"id": "7f0d8012-f8bc-48c9-9653-2b993e960fcd",
+							"id": "b9cee415-3b1b-47dc-8f96-fc1e7b1c0805",
 							"name": "Successfully created case.",
 							"originalRequest": {
 								"method": "POST",
@@ -2574,7 +2574,7 @@
 							"body": "{\n  \"status\": \"Active\",\n  \"category\": \"Eye\",\n  \"severity\": \"0-Critical Impact\",\n  \"subject\": \"Operation follow-up\",\n  \"patientDetail\": {\n    \"firstName\": \"Matt\",\n    \"lastName\": \"Turner\",\n    \"userName\": \"mattturner10\",\n    \"phone\": 9452877662,\n    \"email\": \"mattturner@gmail.com\",\n    \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n  },\n  \"solution\": {\n    \"solutionSubject\": \"Operate eye disease.\",\n    \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n    \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n  },\n  \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n  \"createdAt\": \"2021-03-30T08:30:00Z\",\n  \"modifiedAt\": \"2021-04-28T08:30:00Z\"\n}"
 						},
 						{
-							"id": "62805c61-5c3a-46d9-8218-70605e79289d",
+							"id": "cb818ee0-e4c8-48ee-8a9d-8c0cfe8dd209",
 							"name": "Invalid request. Please fill the required input/inputs.",
 							"originalRequest": {
 								"method": "POST",
@@ -2611,7 +2611,7 @@
 							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 						},
 						{
-							"id": "4183655d-c136-4c33-932d-b52d7207834f",
+							"id": "9eae8ac1-e07a-4b5c-ba79-1119cc12af5a",
 							"name": "Bad request. Can't find the requested resource.",
 							"originalRequest": {
 								"method": "POST",
@@ -2648,7 +2648,7 @@
 							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 						},
 						{
-							"id": "892fe37f-2bc6-4e0e-8059-3d9586fc1543",
+							"id": "372b751d-d2a0-4c64-b7f3-098579cb0b02",
 							"name": "Internal server error. Can't fulfill the request.",
 							"originalRequest": {
 								"method": "POST",
@@ -2688,7 +2688,7 @@
 				},
 				{
 					"name": "Find all cases.",
-					"id": "960ef6cc-e266-4f44-b69f-dda7024a7cb8",
+					"id": "d115f842-87c9-46ae-8296-9e1a06b4d60d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2725,7 +2725,7 @@
 					},
 					"response": [
 						{
-							"id": "c8d9d64f-20b5-45a7-8972-18bc7507b4e7",
+							"id": "3c65d07a-5f00-43c0-8c77-85716463172b",
 							"name": "Successfully retrieved all the cases.",
 							"originalRequest": {
 								"method": "GET",
@@ -2763,7 +2763,7 @@
 							"body": "[\n  {\n    \"status\": \"Active\",\n    \"category\": \"Eye\",\n    \"severity\": \"0-Critical Impact\",\n    \"subject\": \"Operation follow-up\",\n    \"patientDetail\": {\n      \"firstName\": \"Matt\",\n      \"lastName\": \"Turner\",\n      \"userName\": \"mattturner10\",\n      \"phone\": 9452877662,\n      \"email\": \"mattturner@gmail.com\",\n      \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n    },\n    \"solution\": {\n      \"solutionSubject\": \"Operate eye disease.\",\n      \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n      \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n    },\n    \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n    \"createdAt\": \"2021-03-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n    \"assignedTo\": {\n      \"firstName\": \"Katherine\",\n      \"lastName\": \"Marshall\",\n      \"phone\": 8452877665,\n      \"email\": \"kathmarshall@hm.io\",\n      \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n      \"assignedOn\": \"2021-03-30T08:30:00Z\",\n      \"profession\": \"Ophthalmologists\"\n    },\n    \"milestones\": [\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      },\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      }\n    ],\n    \"activities\": [\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ],\n    \"notes\": [\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ]\n  },\n  {\n    \"status\": \"Active\",\n    \"category\": \"Eye\",\n    \"severity\": \"0-Critical Impact\",\n    \"subject\": \"Operation follow-up\",\n    \"patientDetail\": {\n      \"firstName\": \"Matt\",\n      \"lastName\": \"Turner\",\n      \"userName\": \"mattturner10\",\n      \"phone\": 9452877662,\n      \"email\": \"mattturner@gmail.com\",\n      \"id\": \"46005a82-a612-4dc1-9279-7215df6895cd\"\n    },\n    \"solution\": {\n      \"solutionSubject\": \"Operate eye disease.\",\n      \"investigation\": \"Diseases on the left eye and abnormal eye development and function.\",\n      \"resolution\": \"Successfully operate on disease on the left eye and normal eye development and function.\"\n    },\n    \"caseId\": \"36005a82-a612-4dc1-9279-7215df6895cd\",\n    \"createdAt\": \"2021-03-30T08:30:00Z\",\n    \"modifiedAt\": \"2021-04-28T08:30:00Z\",\n    \"assignedTo\": {\n      \"firstName\": \"Katherine\",\n      \"lastName\": \"Marshall\",\n      \"phone\": 8452877665,\n      \"email\": \"kathmarshall@hm.io\",\n      \"id\": \"26005a82-a612-4dc1-9279-7215df6895cd\",\n      \"assignedOn\": \"2021-03-30T08:30:00Z\",\n      \"profession\": \"Ophthalmologists\"\n    },\n    \"milestones\": [\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      },\n      {\n        \"description\": \"Home therapy for left eye before surgery.\",\n        \"id\": \"30027811-1ddb-4135-bb94-3a68aae1491c\",\n        \"createdAt\": \"2022-10-21T01:12:23.926Z\"\n      }\n    ],\n    \"activities\": [\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"description\": \"Uploaded X-Ray report.\",\n        \"id\": \"a7a32579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ],\n    \"notes\": [\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      },\n      {\n        \"comment\": \"Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.\",\n        \"id\": \"n7a42579-d7c3-45ef-8b5f-8eac996db599\",\n        \"createdAt\": \"2022-10-21T01:14:27.516Z\"\n      }\n    ]\n  }\n]"
 						},
 						{
-							"id": "5ec083ed-a1bf-4f65-9796-8b70b000f035",
+							"id": "00e68a3d-d0c6-451a-87e8-5ed806a9c57e",
 							"name": "Invalid request. Please fill the required input/inputs.",
 							"originalRequest": {
 								"method": "GET",
@@ -2801,7 +2801,7 @@
 							"body": "{\n  \"statusCode\": 400,\n  \"description\": \"Invalid request. Please fill the required input/inputs.\"\n}"
 						},
 						{
-							"id": "cc0e81be-6bb3-43c3-afa9-97bc03271f71",
+							"id": "54e27f55-097b-4715-9b6b-1e253fc15575",
 							"name": "Bad request. Can't find the requested resource.",
 							"originalRequest": {
 								"method": "GET",
@@ -2839,7 +2839,7 @@
 							"body": "{\n  \"statusCode\": 404,\n  \"description\": \"Bad request. Can't find the requested resource.\"\n}"
 						},
 						{
-							"id": "6dc0e15a-ce48-41b5-ab70-d9cd1fbe2e5d",
+							"id": "8a6f9ee9-9dbd-4ba3-a0b2-c12af3e2411e",
 							"name": "Internal server error. Can't fulfill the request.",
 							"originalRequest": {
 								"method": "GET",
@@ -2879,12 +2879,12 @@
 					]
 				}
 			],
-			"id": "4ac5b2b6-3b1c-41db-b570-992d72176adb"
+			"id": "abb6731b-8f59-46d3-9179-1217db2d2a9f"
 		}
 	],
 	"variable": [
 		{
-			"id": "2c8707cb-934a-4e7d-9666-f04d7c81c697",
+			"id": "461bbbb5-cfc6-4a99-98ef-e10b97b8712d",
 			"key": "baseUrl",
 			"value": "http://localhost:3000",
 			"type": "string"

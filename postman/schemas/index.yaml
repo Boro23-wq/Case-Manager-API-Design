@@ -21,7 +21,7 @@ tags:
 paths:
     # Case Manager endpoints
     /casemanagers:
-        description: API endpoints for case managers.
+        description: API endpoint for case managers.
         # @POST /casemanagers
         post:
             tags:
@@ -241,7 +241,7 @@ paths:
                       format: int64
                       example: 378cdddc-31af-481c-9000-2ab4eabeebaf
             responses:
-                "204":
+                "200":
                     description: Case manager deleted sucessfully.
                     content:
                         application/json:
@@ -362,8 +362,8 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-    /cases/{id}:
-        # @GET /cases/{id}
+    /cases/{caseId}:
+        # @GET /cases/{caseId}
         get:
             tags:
                 - case
@@ -371,7 +371,7 @@ paths:
             description: Returns a single case with the provided ID.
             operationId: getCaseByID
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: ID of the case to be returned.
                   required: true
@@ -405,7 +405,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @PUT /cases/{id}
+        # @PUT /cases/{caseId}
         put:
             tags:
                 - case
@@ -413,7 +413,7 @@ paths:
             description: Update details of a case using ID.
             operationId: updateCase
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: ID of the case to be updated.
                   required: true
@@ -456,7 +456,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @DELETE /cases/{id}
+        # @DELETE /cases/{caseId}
         delete:
             tags:
                 - case
@@ -464,7 +464,7 @@ paths:
             description: Delete an existing case.
             operationId: deleteCase
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: ID of the case to be deleted.
                   required: true
@@ -473,7 +473,7 @@ paths:
                       format: int64
                       example: 36005a82-a612-4dc1-9279-7215df6895cd
             responses:
-                "204":
+                "200":
                     description: Case deleted sucessfully.
                     content:
                         application/json:
@@ -500,8 +500,8 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-    /cases/{id}/notes:
-        # @POST /cases/{id}/notes
+    /cases/{caseId}/notes:
+        # @POST /cases/{caseId}/notes
         post:
             tags:
                 - case-notes
@@ -509,7 +509,7 @@ paths:
             description: Add a case note.
             operationId: addCaseNote
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: Note to be added to the case.
                   required: true
@@ -552,7 +552,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @GET /cases/{id}/notes
+        # @GET /cases/{caseId}/notes
         get:
             tags:
                 - case-notes
@@ -560,7 +560,7 @@ paths:
             description: Add a case note.
             operationId: addCaseNote
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: Note id to be retrieved.
                   required: true
@@ -597,8 +597,8 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-    /cases/{id}/notes/{noteId}:
-        # @PUT /cases/{id}/notes
+    /cases/{caseId}/notes/{noteId}:
+        # @PUT /cases/{caseId}/notes
         put:
             tags:
                 - case-notes
@@ -606,7 +606,7 @@ paths:
             description: Update a case note.
             operationId: updateCaseNote
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: Case related to the note.
                   required: true
@@ -658,7 +658,7 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/HttpError500"
 
-        # @POST /cases/{id}/notes/{noteId}
+        # @POST /cases/{caseId}/notes/{noteId}
         delete:
             tags:
                 - case-notes
@@ -666,7 +666,7 @@ paths:
             description: Delete a case note.
             operationId: deleteCaseNote
             parameters:
-                - name: id
+                - name: caseId
                   in: path
                   description: Note to be deleted from the case.
                   required: true
@@ -685,7 +685,7 @@ paths:
                       example: n7a42579-d7c3-45ef-8b5f-8eac996db599
 
             responses:
-                "204":
+                "200":
                     description: Note deleted sucessfully.
                     content:
                         application/json:
