@@ -1,11 +1,11 @@
 
-# Case Manager API Documentation
+# Case Managers API Collection
 
 The API retrieves information about case managers and their cases.
 
 Contact Support:
- - Name: Sintu Boro
- - Email: sb394@njit.edu
+ - **Name**: Sintu Boro
+ - **Email**: sb394@njit.edu
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
 
@@ -14,7 +14,8 @@ Contact Support:
 
 | Key | Value | Type |
 | --- | ------|-------------|
-| baseUrl | http://localhost:3000 | string |
+| baseUrl (dev) | http://localhost:3000 | string |
+| baseUrl (prod/mock) | https://01d9b5a5-eeac-4d0a-82f2-b7666179ebbb.mock.pstmn.io | string |
 
 
 
@@ -33,7 +34,7 @@ Contact Support:
         * [Bad request. Can't find the requested resource.](#iii-example-request-bad-request-cant-find-the-requested-resource-1)
         * [Internal server error. Can't fulfill the request.](#iv-example-request-internal-server-error-cant-fulfill-the-request-1)
 * [cases](#cases)
-    1. [{id}](#1-id-1)
+    1. [{caseId}](#1-caseid)
     1. [Create a case.](#2-create-a-case)
         * [Successfully created case.](#i-example-request-successfully-created-case)
         * [Invalid request. Please fill the required input/inputs.](#ii-example-request-invalid-request-please-fill-the-required-inputinputs-2)
@@ -155,7 +156,7 @@ URL: {{baseUrl}}/casemanagers
 
 ```js        
 {
-  "username": "johndoe",
+//   "username": "johndoe",
   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
@@ -189,7 +190,7 @@ URL: {{baseUrl}}/casemanagers
 ```js        
 {
   "username": "johndoe",
-  "firstName": "John",
+//   "firstName": "John",
   "lastName": "Doe",
   "email": "johndoe@cm.io",
   "phone": 8623817665
@@ -220,13 +221,13 @@ URL: {{baseUrl}}/casemanagers
 ***Body:***
 
 ```js        
-{
-  "username": "johndoe",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@cm.io",
-  "phone": 8623817665
-}
+// {
+//   "username": "johndoe",
+//   "firstName": "John",
+//   "lastName": "Doe",
+//   "email": "johndoe@cm.io",
+//   "phone": 8623817665
+// }
 ```
 
 
@@ -269,28 +270,10 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-***Query params:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 | Page number to paginate. |
-| perPage | 10 | Total items to retrive at once. |
-
-
-
 ***More example Requests/Responses:***
 
 
 #### I. Example Request: Successfully retrieved all the case managers.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 |  |
-| perPage | 10 |  |
 
 
 
@@ -703,7 +686,7 @@ URL: {{baseUrl}}/casemanagers
 
 
 
-### 1. {id}
+### 1. {caseId}
 
 
 
@@ -933,77 +916,7 @@ URL: {{baseUrl}}/cases
 
 
 
-***Body:***
-
-```js        
-{
-  "status": "Active",
-  "category": "Eye",
-  "severity": "0-Critical Impact",
-  "subject": "Operation follow-up",
-  "patientDetail": {
-    "firstName": "Matt",
-    "lastName": "Turner",
-    "userName": "mattturner10",
-    "phone": 9452877662,
-    "email": "mattturner@gmail.com",
-    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-  },
-  "solution": {
-    "solutionSubject": "Operate eye disease.",
-    "investigation": "Diseases on the left eye and abnormal eye development and function.",
-    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-  },
-  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-  "createdAt": "2021-03-30T08:30:00Z",
-  "modifiedAt": "2021-04-28T08:30:00Z",
-  "assignedTo": {
-    "firstName": "Katherine",
-    "lastName": "Marshall",
-    "phone": 8452877665,
-    "email": "kathmarshall@hm.io",
-    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-    "assignedOn": "2021-03-30T08:30:00Z",
-    "profession": "Ophthalmologists"
-  },
-  "milestones": [
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    },
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    }
-  ],
-  "activities": [
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ],
-  "notes": [
-    {
-      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
-      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
-      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ]
-}
-```
+***Body: None***
 
 
 
@@ -1026,77 +939,7 @@ URL: {{baseUrl}}/cases
 
 
 
-***Body:***
-
-```js        
-{
-  "status": "Active",
-  "category": "Eye",
-  "severity": "0-Critical Impact",
-  "subject": "Operation follow-up",
-  "patientDetail": {
-    "firstName": "Matt",
-    "lastName": "Turner",
-    "userName": "mattturner10",
-    "phone": 9452877662,
-    "email": "mattturner@gmail.com",
-    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-  },
-  "solution": {
-    "solutionSubject": "Operate eye disease.",
-    "investigation": "Diseases on the left eye and abnormal eye development and function.",
-    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-  },
-  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-  "createdAt": "2021-03-30T08:30:00Z",
-  "modifiedAt": "2021-04-28T08:30:00Z",
-  "assignedTo": {
-    "firstName": "Katherine",
-    "lastName": "Marshall",
-    "phone": 8452877665,
-    "email": "kathmarshall@hm.io",
-    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-    "assignedOn": "2021-03-30T08:30:00Z",
-    "profession": "Ophthalmologists"
-  },
-  "milestones": [
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    },
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    }
-  ],
-  "activities": [
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ],
-  "notes": [
-    {
-      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
-      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
-      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ]
-}
-```
+***Body: None***
 
 
 
@@ -1119,77 +962,7 @@ URL: {{baseUrl}}/cases
 
 
 
-***Body:***
-
-```js        
-{
-  "status": "Active",
-  "category": "Eye",
-  "severity": "0-Critical Impact",
-  "subject": "Operation follow-up",
-  "patientDetail": {
-    "firstName": "Matt",
-    "lastName": "Turner",
-    "userName": "mattturner10",
-    "phone": 9452877662,
-    "email": "mattturner@gmail.com",
-    "id": "46005a82-a612-4dc1-9279-7215df6895cd"
-  },
-  "solution": {
-    "solutionSubject": "Operate eye disease.",
-    "investigation": "Diseases on the left eye and abnormal eye development and function.",
-    "resolution": "Successfully operate on disease on the left eye and normal eye development and function."
-  },
-  "caseId": "36005a82-a612-4dc1-9279-7215df6895cd",
-  "createdAt": "2021-03-30T08:30:00Z",
-  "modifiedAt": "2021-04-28T08:30:00Z",
-  "assignedTo": {
-    "firstName": "Katherine",
-    "lastName": "Marshall",
-    "phone": 8452877665,
-    "email": "kathmarshall@hm.io",
-    "id": "26005a82-a612-4dc1-9279-7215df6895cd",
-    "assignedOn": "2021-03-30T08:30:00Z",
-    "profession": "Ophthalmologists"
-  },
-  "milestones": [
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    },
-    {
-      "description": "Home therapy for left eye before surgery.",
-      "id": "30027811-1ddb-4135-bb94-3a68aae1491c",
-      "createdAt": "2022-10-21T01:12:23.926Z"
-    }
-  ],
-  "activities": [
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "description": "Uploaded X-Ray report.",
-      "id": "a7a32579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ],
-  "notes": [
-    {
-      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
-      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    },
-    {
-      "comment": "Client is at risk of being non-adherent to medications and other appointments. Client needs reminders to assist with keeping appointments.",
-      "id": "n7a42579-d7c3-45ef-8b5f-8eac996db599",
-      "createdAt": "2022-10-21T01:14:27.516Z"
-    }
-  ]
-}
-```
+***Body: None***
 
 
 
@@ -1231,28 +1004,10 @@ URL: {{baseUrl}}/cases
 
 
 
-***Query params:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 | Page number to paginate. |
-| perPage | 10 | Total items to retrive at once. |
-
-
-
 ***More example Requests/Responses:***
 
 
 #### I. Example Request: Successfully retrieved all the cases.
-
-
-
-***Query:***
-
-| Key | Value | Description |
-| --- | ------|-------------|
-| page | 1 |  |
-| perPage | 10 |  |
 
 
 
@@ -1504,6 +1259,6 @@ URL: {{baseUrl}}/cases
 
 
 ---
-[Back to top](#case-manager-api-documentation)
+[Back to top](#case-managers-api-collection)
 
->Generated at 2022-10-30 18:24:48 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2022-10-30 21:18:27 by [docgen](https://github.com/thedevsaddam/docgen)
